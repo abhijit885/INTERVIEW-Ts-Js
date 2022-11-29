@@ -13,6 +13,8 @@
 // var num = (number--) + (--number) //42 + 40 = 82
 
 
+
+
 // //scope
 // let a = 10//global scope
 // console.log(a)
