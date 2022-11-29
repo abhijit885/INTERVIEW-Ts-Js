@@ -81,6 +81,113 @@
 
 // }, 1000);
 
+///Async() & Await() 
+function cartValidation(productuctId) {
+    let pr1 = new Promise((resolve, reject) => {
+        let confermationid = '';
+        if (!productuctId) {
+            reject('no productuctId id');
+        }
+        setTimeout(() => {
+            confermationid = '13'
+            resolve(confermationid);
+        }, 7000);
+    })
+    return pr1
+}
+function orderPlace(confermationid) {
+    let pr2 = new Promise((resolve, reject) => {
+        let orderId = '';
+        if (!confermationid) {
+            reject('no confermation id')
+        }
+        setTimeout(() => {
+            orderId = '14'
+            resolve(orderId);
+        }, 5000);
+    });
+    return pr2;
+}
+function payment(oderid) {
+    let paymentId = '';
+    if (!oderid) {
+        console.log('no oderid id');
+        return
+    }
+    setTimeout(() => {
+        paymentId = '15'
+        return paymentId
+    }, 4000)
+}
+async function placeOrder() {
+    try {
+        let confermationid = await cartValidation('15');
+        console.log(confermationid);
+        let orderid = await orderPlace('');
+        console.log(orderid);
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
+placeOrder();
+
+//Promise()
+// function cartValidation(productuctId){
+//     let pr1=new Promise((resolve,reject)=>{
+//         let confermationid='';
+//         if(!productuctId){
+//            reject('no productuctId id');  
+//         }
+//             setTimeout(()=>{
+//                 confermationid='13'
+//                 resolve(confermationid);
+//             },7000); 
+//     }) 
+//     return pr1
+// }
+// function orderPlace(confermationid){
+// let pr2= new Promise((resolve,resject)=>{
+// let orderId='';
+//     if(!confermationid){
+//         resject('no confermation id')
+//     }
+//     setTimeout(()=>{
+//         orderId='14'
+//        resolve(orderId);
+//     },5000);
+// });
+//    return pr2;
+// }
+// function payment(oderid){
+//     let paymentId='';
+//     if(!oderid){
+//         console.log('no oderid id');
+//         return
+//     }
+//     setTimeout(()=>{
+//         paymentId='15'
+//         return paymentId
+//     },4000)
+// }
+// function placeOrder(){
+//     cartValidation('12').then((confermationid)=>{
+//         console.log(confermationid);
+//         return confermationid;
+//     })
+//     .then((confermationid)=>{
+//         return orderPlace(confermationid);
+//     })
+//     .then((orderId)=>{
+//         console.log(orderId)
+//     })
+//     .catch((err)=>{
+//         console.log(err);
+//     })
+// }
+// placeOrder();
+
+
 // touchableOpacity vs button
 // map vs forEach
 // for vs forEach

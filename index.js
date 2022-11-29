@@ -22,4 +22,58 @@
 //     for (var i = 1 ;)
 // }
 
-console.log('hello')
+function cartValidation(productuctId) {
+    let pr1 = new Promise((resolve, reject) => {
+        let confermationid = '';
+        if (!productuctId) {
+            reject('no productuctId id');
+        }
+        setTimeout(() => {
+            confermationid = '13'
+            resolve(confermationid);
+        }, 7000);
+    })
+    return pr1
+}
+function orderPlace(confermationid) {
+    let pr2 = new Promise((resolve, reject) => {
+        let orderId = '';
+        if (!confermationid) {
+            reject('no confermation id')
+        }
+        setTimeout(() => {
+            orderId = '14'
+            resolve(orderId);
+        }, 5000);
+    });
+    return pr2;
+}
+function payment(oderid) {
+    let pr3 = new Promise((resolve, reject) => {
+        let paymentId = '';
+        if (!oderid) {
+            console.log('no oderid id');
+            return
+        }
+        setTimeout(() => {
+            paymentId = '15'
+            resolve(paymentId);
+        }, 2000)
+    })
+    return pr3;
+}
+async function placeOrder() {
+    try {
+        let confermationid = await cartValidation('15');
+        console.log(confermationid);
+        let orderid = await orderPlace('ewwe');
+        console.log(orderid);
+        let paymentid = await payment("ewewewee")
+        console.log(paymentid);
+
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
+placeOrder();
