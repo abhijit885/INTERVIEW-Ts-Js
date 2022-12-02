@@ -216,7 +216,9 @@ placeOrder();
 //                         first cass finction ??
 //                             call back function??
 //                                 hire order function ??
-
+//array to string convert
+//string to array convert
+//remove dublecat elements from array and string 
 // var number = 42
 // console.log(number++) //42
 // console.log(number)   //43
