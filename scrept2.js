@@ -219,6 +219,11 @@ placeOrder();
 //array to string convert
 //string to array convert
 //remove dublecat elements from array and string 
+//Spread,rest,
+//ref()
+//useRef()
+//UseMemo()
+//forEach vs Map
 // var number = 42
 // console.log(number++) //42
 // console.log(number)   //43
