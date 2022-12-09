@@ -63,3 +63,4 @@
 // JS single threaded how perform call back fuction
 // how roted screen potret to landscrep
 // payment gatway
+//style => display:'flex',flex-wrape:'"wrape",zindex",position:'absolute'
