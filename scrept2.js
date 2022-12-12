@@ -217,8 +217,37 @@ placeOrder();
 //                             call back function??
 //                                 hire order function ??
 //array to string convert
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let text = fruits.toString();
 //string to array convert
+var string = "01,jejejej";
+var array2 = string.split(",");
 //remove dublecat elements from array and string 
+var arr = ["apple", "mango", "apple", 
+            "orange", "mango", "mango"];
+      
+    function removeDuplicates(arr) {
+        return arr.filter((item, 
+            index) => arr.indexOf(item) === index);
+    }
+//find highest element in array 
+var array = [3 , 6, 2, 56, 32, 5, 89, 32];
+var largest= 0;
+
+for (i=0; i<array.length; i++){
+    if (array[i]>largest) {
+        largest=array[i];
+    }
+}
+//find 2nd hughest element in array 
+var secondMax = function (){ 
+    var arr = [20, 120, 111, 215, 54, 78]; // use int arrays
+    var max = Math.max.apply(null, arr); // get the max of the array
+    arr.splice(arr.indexOf(max), 1); // remove max from the array
+    return Math.max.apply(null, arr); // get the 2nd max
+};
+//find smallest element in array 
+//find 2nd smallest element in array 
 //Spread,rest,
 //ref()
 //useRef()
