@@ -223,24 +223,24 @@ let text = fruits.toString();
 var string = "01,jejejej";
 var array2 = string.split(",");
 //remove dublecat elements from array and string 
-var arr = ["apple", "mango", "apple", 
-            "orange", "mango", "mango"];
-      
-    function removeDuplicates(arr) {
-        return arr.filter((item, 
-            index) => arr.indexOf(item) === index);
-    }
-//find highest element in array 
-var array = [3 , 6, 2, 56, 32, 5, 89, 32];
-var largest= 0;
+var arr = ["apple", "mango", "appleaaa",
+    "orange", "mango", "mango"];
 
-for (i=0; i<array.length; i++){
-    if (array[i]>largest) {
-        largest=array[i];
+function removeDuplicates(arr) {
+    return arr.filter((item,
+        index) => arr.indexOf(item) === index);
+}
+//find highest element in array 
+var array = [3, 6, 2, 56, 32, 5, 89, 32];
+var largest = 0;
+
+for (i = 0; i < array.length; i++) {
+    if (array[i] > largest) {
+        largest = array[i];
     }
 }
 //find 2nd hughest element in array 
-var secondMax = function (){ 
+var secondMax = function () {
     var arr = [20, 120, 111, 215, 54, 78]; // use int arrays
     var max = Math.max.apply(null, arr); // get the max of the array
     arr.splice(arr.indexOf(max), 1); // remove max from the array
