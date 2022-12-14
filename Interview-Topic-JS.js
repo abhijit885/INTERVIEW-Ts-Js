@@ -1,13 +1,11 @@
-// touchableOpacity vs button
+
 // map vs forEach
 // for vs forEach
-// scrollView vs flatlist
+
 // tradutional function vs arrow function
 // Lifecycle of React Native compare with functional component
-// high resolution image optimize
-// if keystore loose what will do
-// certifecate create in importScriptsvertual scroll view
-// cashing in RN
+
+
 // null vs nan vs undefined
 // datatypes ??
 // while vs doWhile
@@ -22,17 +20,41 @@
 // first class function ??
 // lexical scope ??
 // scope chain ??
-// first cass finction ??
+// first class function ??
 // call back function??
 // hire order function ??
 // array to string convert
 // string to array convert
-// remove dublecat elements from array and string 
+// sort a array 
+// search a array element
+// filter a array
+// array in assending or desanding order
+// remove dublicate elements from array and string 
 // Spread,rest,
 // ref()
 // useRef()
 // UseMemo()
 // forEach vs Map
+
+// scope ??
+// hosting ??
+// shadowing ??
+// closer ??
+// illegal Shadowing ??
+// temporal dead zone ??
+// annonomas function ???
+// first class function ??
+// var VS let VS const
+// MAP() FILTER() REDUCE() sort() split() slice() trim()
+// Polyfill for map() FILTER() REDUCE() ??
+
+// JS single threaded how perform call back fuction
+
+
+//style => display:'flex',flex-wrape:'"wrape",zindex",position:'absolute',media Query for web react
+
+////////////////////////-------CODE SNEPETS--------//////////////////////////////
+
 // var number = 42
 // console.log(number++) //42
 // console.log(number)   //43
@@ -46,21 +68,3 @@
 // var num = (number++) + (++number) //42 + 44 = 86
 // var num = (--number) + (number--) //41 + 41 = 82
 // var num = (number--) + (--number) //42 + 40 = 82
-// scope ??
-// hosting ??
-// shadowing ??
-// closer ??
-// illegal Shadowing ??
-// temporal dead zone ??
-// annonomas function ???
-// first class function ??
-// var VS let VS const
-// MAP() FILTER() REDUCE() sort() split() slice() trim()
-// Polyfill for map() FILTER() REDUCE() ??
-// testing JEST + ENZYME
-// PAYMENT GETWAY
-// MAP IN APP INTEGRATION
-// JS single threaded how perform call back fuction
-// how roted screen potret to landscrep
-// payment gatway
-//style => display:'flex',flex-wrape:'"wrape",zindex",position:'absolute',media Query for web react
