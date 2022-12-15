@@ -1,15 +1,13 @@
 
 // map vs forEach
 // for vs forEach
-
 // tradutional function vs arrow function
 // Lifecycle of React Native compare with functional component
-
-
 // null vs nan vs undefined
 // datatypes ??
 // while vs doWhile
 // spread vs rest
+// Map VS ForEach
 // event loop
 // call shack ??
 // call back quee ??
@@ -31,10 +29,7 @@
 // array in assending or desanding order
 // remove dublicate elements from array and string 
 // Spread,rest,
-// ref()
-// useRef()
-// UseMemo()
-// forEach vs Map
+
 
 // scope ??
 // hosting ??

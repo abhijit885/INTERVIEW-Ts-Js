@@ -12,7 +12,7 @@
 // var num = (--number) + (number--) //41 + 41 = 82
 // var num = (number--) + (--number) //42 + 40 = 82
 
-//scope
+Scope
 // let a = 10//global scope
 // console.log(a)
 // // {
@@ -23,7 +23,7 @@
 // //     let a = 10 //let is function scope// var or const
 // // }
 // //console.log(a) let is error // const is error //var is ok because it is function scope
-// //shadowing
+Shadowing
 // // function test() {
 // //     let a = "hello"
 // //     if (true) {
@@ -34,7 +34,7 @@
 // // }
 // // test()
 
-// //illigal shadowing
+Illigal shadowing
 // function test() {
 //     var a = "hi"
 //     let b = "hello"
@@ -66,7 +66,7 @@
 //     }
 //     inner(i);
 // }
-// //declaration
+Declaration
 // var a//ok
 // var a//ok
 
@@ -81,13 +81,13 @@
 //     let a  //shadowing
 // }
 
-// //declaration with out initialization
+Declaration with out initialization
 // var a//ok
 // let a//ok
 // const a //error
 // const a = 5 //ok
 
-// //re-initialization
+Re - initialization
 
 // var a = 5
 // a = 3        //ok
@@ -98,7 +98,7 @@
 // let a = 3
 // a = 6        //ok
 
-// //hosting
+Hosting
 // console.log(a)//print undefine //var hosted
 // var a = 10
 
@@ -117,7 +117,7 @@
 //     var c = 10;//undefine
 // }
 // abc()
-// //function hosting
+Function hosting
 // //function are hosted differently .function re hosted with its name and we can function before or after any where it hosted fully
 // functionName()//hosted fully
 // function functionName() {
@@ -175,7 +175,7 @@
 //         return 0
 //     }
 // }))
-
+Polyfill
 // //Polyfill for map()
 // arr.prototype.myMap = function (cb) {
 //     let temp = [];

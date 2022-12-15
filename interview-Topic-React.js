@@ -56,3 +56,5 @@ export default Student;
 //UseRef() Hooking Perticuler component of HTML
 
 //UseMemo() 
+// ref()
+// useRef()
