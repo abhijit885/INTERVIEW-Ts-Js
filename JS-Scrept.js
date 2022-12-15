@@ -98,7 +98,29 @@ Re - initialization
 // let a = 3
 // a = 6        //ok
 
+Return
+
+function fullname(fname, lname) {
+    var a = fname + "-" + lname
+    return a
+}
+var fn = fullname("abhijit", "saha")
+console.log("view", fn)
+
+function add(a, b, c) {
+    var z = a + b + c;
+    return z
+}
+function persentage(commingVal) {
+    var finalValue = commingVal / 300 * 100
+    document.write(finalValue)
+    console.log("view", finalValue)
+}
+var total = add(20, 30, 40);
+persentage(total)
+
 Hosting
+
 // console.log(a)//print undefine //var hosted
 // var a = 10
 
