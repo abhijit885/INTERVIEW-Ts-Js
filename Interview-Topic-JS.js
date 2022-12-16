@@ -1,6 +1,9 @@
 
 // map vs forEach
 // for vs forEach
+//datastructure in JS
+//make calculetor 
+//febonaci serize 
 // tradutional function vs arrow function
 // Lifecycle of React Native compare with functional component
 // null vs nan vs undefined
