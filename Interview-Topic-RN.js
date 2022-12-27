@@ -1,6 +1,6 @@
 // payment gatway
 // how roted screen potret to landscrep
-// testing JEST + ENZYME
+// testing JEST** + ENZYME
 // touchableOpacity vs button
 // scrollView vs flatlist
 // high resolution image optimize
@@ -10,7 +10,10 @@
 // cashing in RN
 // Google all services Map,Google Login,Facebook Login IN APP INTEGRATION
 // Firebase Service (social login ,CRUD operation)
-
+// Scrollview VS FlatList
+// Custom Hook
+//destructuring
+//Spread,rest
 //lyfecycle methods order of execution
 1.constructor()//1st
 2.Render() //2nd
