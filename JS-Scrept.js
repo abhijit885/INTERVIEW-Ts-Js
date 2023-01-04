@@ -17,7 +17,7 @@ Scope
 // console.log(a)
 // // {
 // //     let a = 10 //or var or const
-// //     console.log(a) //let is ok // var is error //const os ok
+// //     console.log(a) //let is ok // var is error //const is ok
 // // }
 // // {
 // //     let a = 10 //let is function scope// var or const
