@@ -21,8 +21,9 @@
 2.Render() //(again) //4th
 4.componentDidUpdate(prevProps, prevstate) //5th
 5.componentWillUnmount()//6th
+// Lifecycle of React Native compare with functional component
 
-//HOC(Higher order Component) a component takes a component as props and return a component
+
 
 import './App.css';
 import React, { useRef, useState } from 'react'

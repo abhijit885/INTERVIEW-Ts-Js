@@ -1,11 +1,12 @@
-
+//HOC(Higher order Component) a component takes a component as props and return a component
+// higher order function(HOF) ??
 // map vs forEach
 // for vs forEach
-//datastructure in JS
-//make calculetor 
-//febonaci serize 
-// tradutional function vs arrow function
-// Lifecycle of React Native compare with functional component
+//data-structure in JS
+//make calculator 
+//fibonacci series 
+//Second Largest Element in Array
+// traditional function vs arrow function
 // null vs nan vs undefined
 // datatypes ??
 // while vs doWhile
@@ -23,7 +24,7 @@
 // scope chain ??
 // first class function ??
 // call back function??
-// hire order function ??
+
 // array to string convert
 // string to array convert
 // sort a array 
