@@ -71,5 +71,18 @@
 // var num = (number++) + (++number) //42 + 44 = 86
 // var num = (--number) + (number--) //41 + 41 = 82
 // var num = (number--) + (--number) //42 + 40 = 82
+
 //7>5>1
 //4<7>2
+
+// const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+// console.log(beasts.indexOf('bison'));
+// // expected output: 1
+
+// // Start from index 2
+// console.log(beasts.indexOf('bison', 2));
+// // expected output: 4
+
+// console.log(beasts.indexOf('giraffe'));
+// // expected output: -1
