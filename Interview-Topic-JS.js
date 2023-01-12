@@ -30,11 +30,12 @@
 // annonomas function ???
 // first class function ??
 // MAP() FILTER() REDUCE() sort() split() slice() trim()
+//all build in array and string function return type
 // Polyfill for map() FILTER() REDUCE() ??
-
-// JS single threaded how perform call back fuction
-
-//////////////////////---------Diffrence-----------/////////////////////
+// Async and awate vs Promice
+// JS single threaded how perform call back function
+//dev dependency and how to install vs dependency
+//////////////////////---------Difrence-----------/////////////////////
 
 // map vs forEach
 // for vs forEach
