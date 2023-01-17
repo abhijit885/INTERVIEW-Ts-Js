@@ -44,7 +44,7 @@
 // null vs nan vs undefined
 // while vs doWhile
 // spread vs rest
-// Map VS ForEach
+// Map() VS ForEach()
 
 /////////////////////////--------style----------///////////////////
 

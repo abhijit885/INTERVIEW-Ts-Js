@@ -187,6 +187,205 @@ placeOrder();
 // }
 // placeOrder();
 
+// CALLBACK || ASYNC , AWAIT || Promise
+
+// console.log("1");
+// setTimeout(()=>{console.log("4")},5000)
+// setTimeout(()=>{console.log("2")},2000)
+// console.log("3");
+///////////////////////
+// const printValue = (val) => {
+//     console.log("printValue",val)
+// }
+
+// const sum = (a,b) => {
+//     const result = a + b;
+//     return result
+// }
+
+// const OutPut = sum(10,5)
+// printValue(OutPut)
+/////////////////  
+//1.no controle to prevent the printValue() function call this time come to picture of callback function
+// const printValue = (val) => {
+//     console.log("printValue",val)
+// }
+
+// const sum = (a,b) => {
+//     const result = a + b;
+//     printValue(result)
+// }
+
+// const OutPut = sum(10,5)
+/////////////////  
+// const printValue = (val) => {
+//     console.log("printValue",val)
+// }
+
+// const sum = (a,b,callback) => {
+//     const result = a + b;
+//     if(callback){
+//         callback(result)
+//     }
+//     return result
+// }
+
+// const OutPut = sum(10,5)
+// console.log("OutPut",OutPut)
+// const OutPut2= sum(10,5,printValue)
+/////////////////////////////Vanila callback Function/////
+const paymentSuccess = true
+const marks = 90
+const enroll = (callback) => {
+    console.log("enroll started")
+    setTimeout(() => {
+        if (paymentSuccess) {
+            callback()
+        } else {
+            console.log("Payment Failed !! ")
+        }
+    }, 2000)
+}
+
+const progress = (callback) => {
+    console.log("progress started")
+    setTimeout(() => {
+        if (marks > 80) {
+            callback()
+        } else {
+            console.log("progress Failed !! ")
+        }
+    }, 2000)
+}
+
+const getCertificate = () => {
+    console.log("getCertificate Process started")
+    setTimeout(() => {
+        console.log("Congratulation....")
+    }, 2000)
+}
+
+enroll(() => {
+    progress(getCertificate)
+})
+Example -
+    enroll(() => {
+        progress((getCertificate) => {
+            c(() => {
+                d(() => {
+                    e(() => {
+                        f(() => {
+
+                        })
+                    })
+                })
+            })
+        })
+    })
+// it is a call back hell which is very difficult to maintain this call backs thats why promises is come to picture common error handel section is catch()
+//////////////////// Promise ///////////////
+const paymentSuccess = true
+const marks = 90
+
+const enroll = () => {
+    console.log("enroll started")
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (paymentSuccess) {
+                resolve()
+            } else {
+                reject("Payment Failed !! ")
+            }
+        }, 2000)
+    })
+    return promise
+}
+
+const progress = () => {
+    console.log("progress started")
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (marks > 70) {
+                resolve()
+            } else {
+                reject("Progress Failed !! ")
+            }
+        }, 2000)
+    })
+    return promise
+}
+
+const getCertificate = () => {
+    console.log("getCertificate Process started")
+    const promise = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Congratulation....")
+        }, 2000)
+    })
+    return promise
+}
+
+enroll()
+    .then(progress)
+    .then(getCertificate)
+    .then((value) => {
+        console.log("last value", value)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+////////////////////////// Async Await ////////////////
+//1. no need to return promise by default async return a promise //await is to hold the execution of code(waiting for promise) in js engine after getting the promise execution again started
+const paymentSuccess = true
+const marks = 90
+
+const enroll = async () => {
+    console.log("enroll started")
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (paymentSuccess) {
+                resolve()
+            } else {
+                reject("Payment Failed !! ")
+            }
+        }, 2000)
+    })
+    return promise
+}
+
+const progress = async () => {
+    console.log("progress started")
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (marks > 70) {
+                resolve()
+            } else {
+                reject("Progress Failed !! ")
+            }
+        }, 2000)
+    })
+    return promise
+}
+
+const getCertificate = async () => {
+    console.log("getCertificate Process started")
+    const promise = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Congratulation....")
+        }, 2000)
+    })
+    return promise
+}
+const head = async () => {
+    try {
+        await enroll()
+        await progress()
+        const lastFunction = await getCertificate()
+        console.log(lastFunction)
+    } catch (err) {
+        console.log("all err", err)
+    }
+}
 
 // touchableOpacity vs button
 // map vs forEach
