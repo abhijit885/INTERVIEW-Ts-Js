@@ -1,4 +1,16 @@
-//lyfecycle methods order of execution
+//////////////////////--------- Topics -----------/////////////////////
+
+//UseRef() Hooking Perticuler component of HTML
+//UseMemo() 
+// ref()
+// useRef()
+//Cookies vs Local Storage vs Session Storage
+//media Query for web react
+//lifecycle methods order of execution
+
+//////////////////////--------- Descriptions -----------/////////////////////
+
+//lifecycle methods 
 1.constructor()//1st
 2.Render() //2nd
 3.componentDidMount() //3rd
@@ -7,7 +19,6 @@
 5.componentWillUnmount()//6th
 
 //HOC(Higher order Component) a component takes a component as props and return a component
-
 import './App.css';
 import React, { useRef, useState } from 'react'
 function App() {
@@ -53,10 +64,4 @@ function Student(props) {
 }
 export default Student;
 
-//UseRef() Hooking Perticuler component of HTML
 
-//UseMemo() 
-
-// ref()
-// useRef()
-//Cookies vs Local Storage vs Session Storage

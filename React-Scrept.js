@@ -1,6 +1,4 @@
 // // const arr = [4, 2, 6, 9, 2, 6, 4, 1, 9, 0]
-
-
 // // /**
 // //  * Remove all the repeated elements from the given array
 // //  *
@@ -415,73 +413,9 @@ const head = async () => {
 //                         first cass finction ??
 //                             call back function??
 //                                 hire order function ??
-//array to string convert
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let text = fruits.toString();
-//string to array convert
-var string = "01,jejejej";
-var array2 = string.split(",");
-//remove dublecat elements from array and string 
-var arr = ["apple", "mango", "appleaaa",
-    "orange", "mango", "mango"];
 
-function removeDuplicates(arr) {
-    return arr.filter((item,
-        index) => arr.indexOf(item) === index);
-}
-//find highest element in array 
-var array = [3, 6, 2, 56, 32, 5, 89, 32];
-var largest = 0;
 
-for (i = 0; i < array.length; i++) {
-    if (array[i] > largest) {
-        largest = array[i];
-    }
-}
-//find 2nd hughest element in array 
-var secondMax = function () {
-    var arr = [20, 120, 111, 215, 54, 78]; // use int arrays
-    var max = Math.max.apply(null, arr); // get the max of the array
-    arr.splice(arr.indexOf(max), 1); // remove max from the array
-    return Math.max.apply(null, arr); // get the 2nd max
-};
-//find smallest element in array 
-//find 2nd smallest element in array 
-//Spread,rest,
-//ref()
-//useRef()
-//UseMemo()
-//forEach vs Map
-// var number = 42
-// console.log(number++) //42
-// console.log(number)   //43
-// console.log(++number)   //44
-// console.log(number)       //44
-// console.log(number--) //42
-// console.log(number) //41
-// console.log(--number) //41
-// console.log(number) //41
-// var num = (++number) + (number++) //43 + 43 = 86
-// var num = (number++) + (++number) //42 + 44 = 86
-// var num = (--number) + (number--) //41 + 41 = 82
-// var num = (number--) + (--number) //42 + 40 = 82
-// scope ??
-//     hosting ??
-//     shadowing ??
-//     closer ??
-//     illegal Shadowing ??
-//         temporal dead zone ??
-//             annonomas function ???
-//                 first class function ??
-// var VS let VS const
-//     MAP() FILTER() REDUCE() sort() split() slice() trim()
-// Polyfill for map() FILTER() REDUCE() ??
-//     testing JEST + ENZYME
-// PAYMENT GETWAY
-// MAP IN APP INTEGRATION
-// JS single threaded how perform call back fuction
-// how roted screen potret to landscrep
-// payment gatway
+
 
 // let chars = ['A', 'B', 'A', 'C', 'B'];
 

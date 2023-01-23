@@ -1,38 +1,23 @@
-//classes =>
-// public , private , Protected =>
-//Getters,Setters => 
-//Abstract Class =>
-//Generics =>
-//Generics in Array =>
-//Generics in arrow Function => 
-//Generics Classes =>
-//Type Narrowing => (IN,AS,InstanceOf,TypeOf,Kind)
+// Basic types =>
+// Union =>
+// Dynamic type =>
+// Type Aliases => 
+// Interface =>
+// Tuples =>
+// classes =>
+// Public,Private,Protected =>
+// Getters,Setters => 
+// Abstract Class =>
+// Generics =>
+// Generics in Array =>
+// Generics in arrow Function => 
+// Generics Classes =>
+// Type Narrowing => (IN,AS,InstanceOf,TypeOf,Kind)
+// primitive type => string,number,boolean
+// Object
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//primitive type => string,number,boolean
-
-//Object
+////////////////// DESCRIPTIONS //////////////////
 
 //function type => 
 function sample (num1:number,num2:number) : number {
@@ -50,7 +35,7 @@ const User3:Array<number> = []
 //Union Type 
 let User4 : number | string | boolean
 
-//Tuples => spacalized array by TS in stricked order
+//Tuples => specialized array by TS in stricked order
 const user5 : (string|number) [] = [23,"aa"]
 
 //Enums => Restrict user choice 
@@ -77,9 +62,9 @@ interface user {
   
  }
 
- //classes =>
+ //Classes =>
 
- // public , private , Protected =>
+ //Public , private , Protected =>
 
  //Getters,Setters => 
 
