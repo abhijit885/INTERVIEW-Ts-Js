@@ -167,10 +167,7 @@ Function hosting
 //     return item * 3
 // });
 
-// //filter run condition on each element of array and pushed in output array
-// //const len = arr.filter((item) => {
-// // return item > 5
-// //});
+
 
 // //reduce output to one value of an array . takes 2 thing call back function and initial value
 // //crr is the pervious computation value if curr is 0 the takes first element as a value
@@ -188,53 +185,7 @@ Function hosting
 // // }, 0))
 // // }
 
-// arr.sort((function (a, b) {
-//     if (a > b) {
-//         return 1
-//     } else if (a < b) {
-//         return -1
-//     } else {
-//         return 0
-//     }
-// }))
-Polyfill
-// //Polyfill for map()
-// arr.prototype.myMap = function (cb) {
-//     let temp = [];
-//     for (let i = 0; i < this.length; i++) {
-//         temp.push(cb(this[i], i, this));
-//     }
-//     return temp;
-// };
-// //Polyfill for filter()
-// arr.prototype.myFilter = function (cb) {
-//     let temp = [];
-//     for (let i = 0; i < this.length; i++) {
-//         if (cb(this[i], i, this)) temp.push(this[i]);
-//     }
-//     return temp;
-// };
-// //Polyfill for reduce()
-// arr.prototype.myReduce = function (cb, initialValue) {
-//     var accumulator = initialValue;
-//     for (let i = 0; i < this.length; i++) {
-//         accumulator = accumulator ? cb(accumulator, this[i], i, this) : this[i];
-//     }
-//     return accumulator;
-// };
 
-// //map vs forItch
-// //map return a new array , map have chaining like ,map().filter()
-// const multiplyThree = arr.map((item, i, arr) => {
-//     return item * 3
-// });
-// //foreatch no chaining it modifi the original array
-
-// const exForIrch = arr.forEach((item, i) => {
-//     arr[i] = item + 3
-// });
-
-// console.log(multiplyThree, exForIrch, arr)
 
 // let stu = [
 //     { name: 'abhijit', roll: 3, marks: 80 },
@@ -381,18 +332,7 @@ Polyfill
 //     return name2
 // }
 // name()(5)       //output -- abhijit 5
-// //scope chain
-// var e = 10
-// function sum(a) {
-//     return function (b) {
-//         return function (c) {
-//             return function (d) {
-//                 return a + b + c + d + e
-//             }
-//         }
-//     }
-// }
-// console.log(sum(1)(2)(3)(4)) // output -- 20
+
 
 // let count = 0
 //     (function printCount() {
@@ -436,19 +376,14 @@ Polyfill
 
 // // map vs forEatch
 // const numbers = [1, 2, 3, 4, 5];
-// const result = numbers.map((item) => {
-//     return item + 2
-// }).filter()     //chaining possable, return a new array
 
-// const result2 = numbers.forEach((item) => {
-//     return item + 2
-// }) //chaining not possable , modify current array not return new array
+
 
 // //for vs forEatch
 // //for is tradisanal
 // //foreach operate each element of array but for can increase and decress element and break not possable
 
-// //higher order function (Higher Orders Functions are functions that perform operations on other functions.)example MAP() FILTER() REDUCE()
+// //
 // const numbers = [1, 2, 3, 4, 5];
 
 // function addOne(item) {
@@ -457,32 +392,11 @@ Polyfill
 //     }
 // }
 // //EX
-// const ex = function x() {
-//     console.log("111")
-// }
-//     (function y() {
-//         ex()
-//     })()
 
 // addOne(item);
-// //first cass finction   ( Pass a function as an Argument) treated like vriable
-// function sayHello() {
-//     return "Hello, ";
-// }
-// function greeting(helloMessage, name) {
-//     console.log(helloMessage() + name);
-// }
-// // Pass `sayHello` as an argument to `greeting` function
-// greeting(sayHello, "JavaScript!");
-// // Hello, JavaScript!
-// // for (var i = 0; i < 5; i++) {
-// //     function name(i) {
-// //         setTimeout(() => {
-// //             console.log(i)
-// //         }, i * 1000);
-// //     }
-// //     name(i)
-// // }
+
+
+
 // // for (let i = 0; i < 5; i++) { //output 0,1,2,3,4
 // //     setTimeout(function () {
 // //         console.log(i)
@@ -499,17 +413,7 @@ Polyfill
 // //     aa()
 // // }
 // // name()
-// // var x = 10
 
-// // function name2(a) {
-// //     return function (b) {
-// //         return function (c) {
-// //             return a + b + c + x
-// //         }
-// //     }
-// // }
-// // //name2((2)(3))
-// // console.log(name2(1)(2)(3))
 // function name() {
 //     return "hello"
 // }
@@ -517,60 +421,10 @@ Polyfill
 //     console.log((helloMessage() + str))
 // }
 // name2(name, "abhijit")
-// // function sayHello() {
-// //     return "Hello, ";
-// // }
-// // function greeting(helloMessage, name) {
-// //     console.log(helloMessage() + name);
-// // }
-// // // Pass `sayHello` as an argument to `greeting` function
-// // greeting(sayHello, "JavaScript!");
-// // Hello, JavaScript!
+
 // //shadowing
-// // function test() {
-// //     let a = "hello"
-// //     if (true) {
-// //         let a = "hi"
-// //         console.log(a) //hi
-// //     }
-// //     console.log(a) //hello
-// // }
-// // test()
-// //var a//ok
-// //var a//ok
 
-// // let a
-// // let b //ok
 
-// // const a
-// // const b //error
-
-// // var a
-// // {
-// //     const a = 2 //shadowing
-// // }
-
-// // //declaration with out initialization
-// // var a//ok
-// // let b//ok
-// // const a //error
-// // const a = 5 //ok
-
-// // //re-initialization
-
-// // var a = 5
-// // a = 3        //ok
-
-// // const a = 3
-// // a = 4         //error
-
-// // let a = 3
-// // a = 6        //ok
-// // var a = 10
-// // let b = 10
-
-// // const c = 10
-// // console.log(c)
 
 // // functionName()//hosted fully
 // // function functionName() {
@@ -580,34 +434,15 @@ Polyfill
 
 // // const arr = [9, 1, 2, 1, 1, 3]
 // // const name = "abhijit saha"
-// // console.log("str to arr ", name.split(' '))
-// // console.log("cut string ", name.slice(0, 5))
+// // 
 // // //const res = arr.push(5)
 // // //console.log("push", res)
-// // console.log("map", arr.map(function (item, i, arr) {
-// //     return item
-// // }))
-// // console.log("total addition", arr.reduce((acc, curr, i, arr) => {
-// //     acc = acc + curr
-// //     return acc
-// // }, 3))
+
+
 // // console.log("filter", arr.filter((item) => {
 // //     return item > 2
 // // }))
-// // console.log(arr.sort((function (a, b) { //insertion sort
-// //     if (a > b) {
-// //         return 1
-// //     } else if (a < b) {
-// //         return -1
-// //     }
-// // })))
-// // console.log("SORT", arr.sort(function name(a, b) {
-// //     if (a > b) {
-// //         return 1
-// //     } else if (a < b) {
-// //         return -1
-// //     }
-// // }))
+
 // // (function functionName() {
 // //     console.log("aaaaaaaaa")
 // //     //var x = 5
@@ -621,34 +456,12 @@ Polyfill
 // // console.log("1111")
 // // (function (x) {
 // //     return (function (y) {
-// //         console.log(x);//1 because of closer lexecal scope every function create  if current scope valye is not find then gose to parent scope
+// //         console.log(x);
+//1 because of closer lexecal scope every function create  if current scope valye is not find then gose to parent scope
 // //     })(2)
 // // })(1)
 // ///////closer
-// // function subscribe() {
-// //     var name = "Abhijit" //global scope
-// //     //inner scope
-// //     function displayname() {
-// //         //inner scope
-// //         function asas() {
-// //             console.log(name)
-// //         }
-// //         asas()
-// //     }
-// //     displayname()
-// // }
-// // subscribe()
 
-// //firstclass function
-// // function sayHello() {
-// //     return "Hello, ";
-// // }
-// // function greeting(helloMessage, name) {
-// //     console.log(helloMessage() + name);
-// // }
-// // // Pass `sayHello` as an argument to `greeting` function
-// // greeting(sayHello, "JavaScript!");
-// // // Hello, JavaScript!
 
 // function show() {
 //     //console.log(a)
