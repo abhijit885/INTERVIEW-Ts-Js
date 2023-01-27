@@ -245,6 +245,7 @@ head();
 // Dev dependency and how to install vs dependency 
 
 // Pass Function as parameter
+//EX1
 function name() {
     return "hello"
 }
@@ -252,6 +253,20 @@ function name2(helloMessage, str) {
     console.log((helloMessage() + str))
 }
 name2(name, "abhijit")
+//EX2
+// function getData() {
+//     alert("Hello from app component")
+// }
+// <Student data={getData} />
+// function Student(props) {
+//     return (
+//         <div>
+//             <h1>Student Component</h1>
+//             <button onClick={props.data}>Call Function</button>
+//         </div>
+//     )
+// }
+// export default Student;
 
 //setTimeout()
 for (var i = 0; i < 5; i++) {
@@ -351,6 +366,8 @@ arr.prototype.myReduce = function (cb, initialValue) {
 //////////////////////---------Difrence-----------/////////////////////
 
 // map() vs forEach()
+//map() : if you use map then map can return new array by iterating main array 
+//forEach() : this can not return anything ,forEach only iterating main array 
 // map return a new array , map have chaining like map().filter() , forEach() no chaining it modified the original array
 const multiplyThree = arr.map((item, i, arr) => {
     return item * 3
@@ -364,18 +381,28 @@ const result22 = numbers.forEach((item) => {
 console.log(multiplyThree, exForEach, arr)
 
 // for vs forEach
+//for just loop through the array item initialized from any index is flexible, forEach() have a callback function,for each is more faster then 
+var arr = [3, 5, 2, 7, 45, 7]
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i])
+}
+arr.forEach((val) => {
+    console.log(val)
+})
+
 // var VS let VS const
+//var : function scope , hoisting possible 
+//let : block scope
+//const : block scope + value never change
 // traditional function vs arrow function
 // null vs nan vs undefined 
+//NaN : is not a number,type is number,
+//undefine : value is not set in variable,
+//null : value is set in variable but it is empty,type is object : var a = null //ok
+
 // while vs doWhile 
+
 // spread vs rest
-
-/////////////////////////--------style----------///////////////////
-
-// display:'flex',
-// flex-wrape:"wrape",
-// zindex,
-// position:'absolute',
 
 ///////////////// Advance Concepts /////////////////////
 
