@@ -1,7 +1,7 @@
 //////////////////////--------- Level 2-----------/////////////////////
 
-//LET(block scope) , VAR(global scope) , CONST(function scope)
-var a//ok
+//LET(block scope) , VAR(function scope scope,global scope) & var can re assigned , CONST(block scope)
+var a//ok 
 var a//ok
 let a
 let b //ok
@@ -242,7 +242,9 @@ head();
 //slice() Splice() IndexOf() trim() ??
 
 // JS single threaded but how perform call back function
+
 // Dev dependency and how to install vs dependency 
+
 
 // Pass Function as parameter
 //EX1
@@ -363,6 +365,8 @@ arr.prototype.myReduce = function (cb, initialValue) {
     return accumulator;
 };
 
+//Generator Function ??
+
 //////////////////////---------Difrence-----------/////////////////////
 
 // map() vs forEach()
@@ -444,6 +448,15 @@ const func = (q, ...params) => {
     console.log("a", params)
 }
 func(4, 5, 6, 7)
+
+const func2 = (...params) => {
+    let sum = 0;
+    params.forEach((par) => {
+        sum = sum + par;
+    })
+    return sum
+}
+console.log(func(4, 5, 6, 7));
 
 // 4. distrcuring
 const objDis = {

@@ -16,7 +16,6 @@
 // primitive type => string,number,boolean
 // Object
 
-
 ////////////////// DESCRIPTIONS //////////////////
 
 //function type => 
