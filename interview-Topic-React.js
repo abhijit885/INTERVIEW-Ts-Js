@@ -10,13 +10,7 @@
 
 //////////////////////--------- Descriptions -----------/////////////////////
 
-//lifecycle methods 
-1.constructor()//1st
-2.Render() //2nd
-3.componentDidMount() //3rd
-2.Render() //(again) //4th
-4.componentDidUpdate(prevProps, prevstate) //5th
-5.componentWillUnmount()//6th
+
 
 //pass function as props
 function getData() {
