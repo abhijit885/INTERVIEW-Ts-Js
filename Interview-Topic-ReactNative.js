@@ -22,6 +22,19 @@
 // Use PNG format instead of JPG
 // Use WEBP format for images. It can help reduce the binary size on iOS and Android by 29%
 
+//How to optimize React native code
+// 1. Use an Image Caching Solution by  react - native - fast - image
+// rendering a lot of images on one screen
+// low performance in general
+// low - performance loading from cache
+// flickering
+// 2.Use appropriate image size
+// 3.Avoid unnecessary renders ex: -> use useMemo()
+// 4.Use nativeDriver with Animated library ex: -> animeted
+// 5.Use Flipper to debug issues
+// 6.Use Hermes
+// 7. Leave console statements in the source code
+// 8.Use Scrollview to render a huge list of data items
 //////////////////////--------- Plugins -----------/////////////////////
 
 // payment getway 
