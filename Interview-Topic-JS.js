@@ -1,5 +1,5 @@
 //////////////////////--------- Level 2-----------/////////////////////
-
+//void is nothing there completely absent but undefine is not define but it is a value
 //LET(block scope) , VAR(function scope scope,global scope) & var can re assigned , CONST(block scope)
 var a//ok 
 var a//ok
@@ -18,6 +18,7 @@ let b//ok
 const a //error
 const a = 5 //ok
 //re-initialization
+//re-assign not possible in const
 var a = 5
 a = 3        //ok
 const a = 3
@@ -401,6 +402,10 @@ arr.forEach((val) => {
 // traditional function vs arrow function
 // null vs nan vs undefined 
 //NaN : is not a number,type is number,
+function sample(num1, num2) {
+    return num1 + num2
+}
+sample("aaa", 2)  //output : NaN
 //undefine : value is not set in variable,
 //null : value is set in variable but it is empty,type is object : var a = null //ok
 

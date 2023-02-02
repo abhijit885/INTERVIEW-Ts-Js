@@ -1,0 +1,29 @@
+git config --global user.name"Abhijit"
+git config --global user.email"Abhijit@gmail"
+git config user.email
+git config user.name
+
+create folder mkdir foldername
+cd folder name
+git init 
+ls -> list of file
+ls -a -> list of hidden files
+git status -> see all track ,untracked,modified files 
+git add filename -> add individual file in git
+git add . ->add all files in git
+git log -> see all comments till now
+git commit -m "message" ->commit message
+git checkout <"commit message"/"branch Name"> -> switch between commit to commit
+git branch ->see all branches
+git checkout "branch name" -> move between branches
+git branch "branch name" -> create new branch
+git checkout -b "branch name" -> create new branch and seit to it
+git mearge "branch name" -> marge 2 branches
+
+
+1.git init
+2.git add .
+3.git commit -m "message"
+4.git branch -M master master
+5.git remote add origin "https//:www."
+6.git push -u origin master
