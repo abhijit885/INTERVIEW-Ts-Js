@@ -13,8 +13,8 @@
 // On iOS, in the General tab and Deployment Info section of Xcode enable the Device Orientation you want to support (ensure you have selected iPhone from the Devices menu when making the changes). For Android, open the AndroidManifest.xml file and within the activity element add 'android:screenOrientation="portrait"' to lock to portrait or 'android:screenOrientation="landscape"' to lock to landscape.
 
 //reactNative animation
-// 1.react - native - share - element for transitions using react navigation inrernally and share element will use in all stack screens
-// 2.react - native - Animatable, it is used in all image, view, text by animatable.its propertys are animation = { 'slideInUp'}, duration, delay, direction, easing
+// 1.react-native-share-element for transitions using react navigation inrernally and share element will use in all stack screens
+// 2.react-native-Animatable, it is used in all image, view, text by animatable.its propertys are animation = { 'slideInUp'}, duration, delay, direction, easing
 
 // high resolution image optimize
 // react-native-image-resizer props are  imageUri,newWidth,newHeight,compressFormat,quality
@@ -32,7 +32,7 @@
 // 3.Avoid unnecessary renders ex: -> use useMemo()
 // 4.Use nativeDriver with Animated library ex: -> animeted
 // 5.Use Flipper to debug issues
-// 6.Use Hermes
+// 6.Use Hermes - 
 // 7. Leave console statements in the source code
 // 8.Use Scrollview to render a huge list of data items
 //////////////////////--------- Plugins -----------/////////////////////
