@@ -2,7 +2,8 @@
 //latest version of react-native : 0.71 ,stable version : 68.5 , 65
 //Xcode version : 12.4
 //@react-navigation/native : V5 ,V6
-
+// netive app vs hybrid app
+// yarn VS npm
 // touchableOpacity vs button
 // scrollView vs flatlist
 // ScrollView loads all the content,the data to be displayed on screen all at once.it would automatically cause performance issues
@@ -15,7 +16,7 @@
 //reactNative animation
 // 1.react-native-share-element for transitions using react navigation inrernally and share element will use in all stack screens
 // 2.react-native-Animatable, it is used in all image, view, text by animatable.its propertys are animation = { 'slideInUp'}, duration, delay, direction, easing
-
+//3.react-navigation-shared-element - changes in stack-navigation
 // high resolution image optimize
 // react-native-image-resizer props are  imageUri,newWidth,newHeight,compressFormat,quality
 // react-native-image-picker props are  maxWidth: 500, maxHeight: 500, quality: 0.5,
@@ -40,7 +41,7 @@
 // payment getway 
 //1.React-Native-Stripe
 //2.React-Native-Razorpay
-
+//3.socket.io for chat 
 // Authentication
 //1.Api Auth
 //2.React-native-google-signIn/google-signin
