@@ -244,8 +244,9 @@ head();
 
 // JS single threaded but how perform call back function
 
-// Dev dependency and how to install vs dependency 
-
+// dependency vs Dev dependency
+// -normal dependency is for project function purpous ,if use -dev in here will increse js bundle size  
+// -dev mins package is using for development purpous
 
 // Pass Function as parameter
 //EX1
