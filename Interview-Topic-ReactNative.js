@@ -28,12 +28,14 @@
 // rendering a lot of images on one screen
 // low performance in general
 // low - performance loading from cache
+// memo : => memorize a state value,shallow compare between previous prop and next props only for premetive value (mens not passing callback function,array,objects)
+// useMemo : => memorize any operation of a function ,is a callback function and have a dependency Array
+// useCallback : => memorize a function , is a callback function and have a dependency Array
 // flickering
 // 2.Use appropriate image size
 // 3.Avoid unnecessary renders ex: -> use useMemo()
 // 4.Use nativeDriver with Animated library ex: -> animeted
 // 5.Use Flipper to debug issues
-// 6.Use Hermes - 
 // 7. Leave console statements in the source code
 // 8.Use Scrollview to render a huge list of data items
 //////////////////////--------- Plugins -----------/////////////////////
@@ -41,33 +43,61 @@
 // payment getway 
 //1.React-Native-Stripe
 //2.React-Native-Razorpay
-//3.socket.io for chat 
+
+//3.Chat socket.io and firebase chat 
+
 // Authentication
 //1.Api Auth
 //2.React-native-google-signIn/google-signin
 //3.React-native-fb sdk
-//4.react-native-apple-authentication
+//4.react-native-apple-authentication 
+
+//Thunk for middleware : => Redux is a state management tool, which is used to store the state of different variables in our react application. It makes complex react applications easier by centralizing the application state. You can learn more about redux here. Redux supports middleware, and middleware functions run between dispatching an action and the moment it reaches the reducer. Redux middlewares can be used for logging, routing, asynchronous actions, etc.
+
+//For the scope of this tutorial, we will focus on a redux middleware called thunk. It allows us to return functions instead of objects from redux actions. Plain redux doesn’t allow complex logic inside action functions, you can only perform simple synchronous updates by dispatching actions. This middleware extends its ability and lets you write complex logic that interacts with the store. Thunk doesn’t interfere with the action until it returns a function
 
 //Redux-Toolkit
+// Redux is a Javascript global state management library designed to act as a central store for managing application states. Redux helps build apps that behave consistently across all environments by providing a system to track all changes made to the state.
 
-//react-queary
+// Action
+// An action is a simple object that indicates a desire to modify a state in the Redux store. It is required that actions specify a payload and a type attribute that describes what kind of change is to be made to the state. Actions require reducers to be successfully carried out.
 
-//Flipper
+// Reducer
+// A reducer is a pure function that takes two arguments; the current state and an action to return a new state result. Reducers don't modify the original state directly; rather, they make a copy of the state and modify that.
 
-//Hermes
+// Dispatch
+// A function that accepts either a synchronous or asynchronous action object and sends it to a reducer for execution.
 
-//@storybook/react-native
+// Slice
+// A collection of reducers and actions that work together to implement a single app feature.
+
+// Store
+// A store is an object that holds the app's entire state tree. Redux can only have a single store in an app.
+
+//react-queary : => React Query is a lightweight, yet powerful library for fetching and caching data in React applications. It is designed to simplify the process of retrieving and managing data and to improve the performance of your application.
+//First, React Query is a convenient tool for managing and fetching data in a React application. It provides features like automatic caching, background updates, and the ability to easily retry failed requests, which can make it easier to build performant and user-friendly applications.React Query and Axios can provide a powerful combination for fetching and managing data in a React application. React Query can handle all of the complex logic for caching, updating, and retrying requests, while Axios can be used to actually make the requests to the server. This can make it easier to build robust and maintainable applications.
+
+//Flipper debug tool 
+
+//Hermes : => Hermes is a new JavaScript engine used by React Native which gives massive performance boosts and apk size boost to React Native by packing loads of useful features from precompiling JavaScript to bytecode to reduced footprint of running JavaScript on mobile devices!
+
+//@storybook/react-native : => “Storybook is a tool for UI development. It makes development faster and easier by isolating components. This allows you to work on one component at a time. You can develop entire UIs without needing to start up a complex dev stack, force certain data into your database, or navigate around your application.”
+// Easy access to all components – access each component and browse through its states without having to worry about business logic
+// Increased chance of catching all edge cases
+// Ease of sharing and reusing components
+// Improved code quality – because you write components in isolation, disregarding business logic, you potentially put greater emphasis on code quality and reusability
+// Better documentation
 
 //@types/styled-components
 
-// testing JEST or ENZYME
+// testing JEST
 //Jest unit testing freamwork
 //1. create a name.test.js file , import the sum() function const Sum = require ('./Sum')
 // 2. test("test case", () => {
 //     expect(sum()).toBe(3)
 // });
 // 3. npm install D(dependency) Jest
-// 4. in package.json "Screpts": {
+// 4. in package.json "Scripts": {
 //     test: "jest"
 // }
 // 5. npm run test
@@ -119,6 +149,7 @@
 //  bundle debug => gradlew assemble release 
 //  upload in playstore => keystore generate ,keymame key_aliases ,add keystore in android app
 //  bundle release => ./gradlew bundlerelease
+
 //IOS :->
 // 1. Pod install
 // 2. apple devloper account create 
@@ -135,8 +166,12 @@
 // 6. generic/any ios device -> Product -> Archive 
 // 7. to .ipa created distribution -> build -> upload to test flight 
 
-// if keystore loose what will do
-// certifecate create in Ios
+// if keystore loose what will do : => 
+//Keep your keystore and private key in a safe and secure place, and ensure that you have secure backups of them. If you publish an app to Google Play and then lose the key with which you signed your app, you will not be able to publish any updates to your app, since you must always sign all versions of your app with the same key.There's no way to recover your key . Lost my keystore for uploaded app on android market .So finally, Its not possible. Please Create new keystore with the application with different package name and version and publish as a new application.
+
+// if IOS or ANDROID folder deleted use -> react-native upgrade commend
+
+// certifecate create in Ios : =>
 // 1.you get purchase approved email from Apple after buying Apple Developer Program
 // 2.go to Developer site(https://developer.apple.com/)
 //     3.click Certificates, IDs & Profiles to go to the certification page. 2 type of certifecat you can download one is devlopment certifecate 2nd is production certification
@@ -149,15 +184,21 @@
 // 10.after xcode is executed, click projectname on the left top and select General tab.
 // connect with apple account
 // 11.connect Provisioning Profiles
+
 // import Scripts vartual scroll view
+
 // cashing in RN
+
 // Google all services Map,Google Login,Facebook Login IN APP INTEGRATION
-// Firebase Service (social login ,CRUD operation)
+
+// Firebase Service (social login ,CRUD operation,notifecation)
+
 // Local Storage @react-native-async-storage/async-storage 
 
 
 //////////////////////--------- Styles -----------/////////////////////
 // react native use StyleSheet component for styleing
+//differnt styling in IOS and ANDROID use platform.ios or Platform.android from react-native
 // const style = StyleSheet.create({
 //     container: {
 //         flex: 1,
@@ -192,12 +233,13 @@
 // 5.componentWillUnmount()//6th execute
 
 //Component
-
-//control vs unControl component
+// 3 way components are render 1.state changes, 2. props are receive changes, 3.parent is render child component will re - render
+// control vs unControl component
 // control component control by the react component bu using onChange and value er get the value and chenge the input tezt value ex: useState, and uncontrol component control by DOM ex: useRef
 
 //HOOKS
 //UseState hook
+
 // useState is a Hook that lets you add state to function components.
 // EX => const [isHungry, setIsHungry] = useState(true);
 

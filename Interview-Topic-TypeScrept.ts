@@ -1,8 +1,9 @@
-// type scrept help in compile time error handelling ,JS only run time 
+// type scrept help in compile time error handling ,JS only run time 
 // TS compile to JS
 // compile TS file to Js -> tsc "file name.ts"
 
-// Basic types =>
+// Basic types => 1.Boolean ,2.Number ,3.String ,4.Null ,5.Undefind
+//dynamic type or any type => is use any in array ,object,string,number 
 // Union => 
 // Dynamic type =>
 // Type Aliases => //any  types are save a place with a variable like name
@@ -150,6 +151,33 @@ interface user {
 
  //Abstract Class =>
 
+ //Generic is a block of code reusable for type ,interface
+ //Generic in type => taking the type from user like a variable in <T>
+ const addID = <T>(obj: T) => {
+   let id = Math.floor(Math.random()* 100)
+   return {...obj ,id}
+ }
+ const user =addID({
+   name:'abhijit',
+   age:40,
+   country:'india'
+ })
+
+ const addID2 = <T extends {
+   name:string;
+   age:number;
+   country:string
+ }
+ >(obj: T) => {
+   let id = Math.floor(Math.random()* 100)
+   return {...obj ,id}
+ }
+ const user2 =addID({
+   name:'abhijit',
+   age:40,
+   country:'india'
+ })
+ 
  //Generics in interface => 
  interface APIResponse<T> {
    status:number;

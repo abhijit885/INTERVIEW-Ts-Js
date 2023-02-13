@@ -1,5 +1,8 @@
 //////////////////////--------- Level 2-----------/////////////////////
-//void is nothing there completely absent but undefine is not define but it is a value
+// var VS let VS const
+//var : function scope , hoisting possible 
+//let : block scope
+//const : block scope + value never change
 //LET(block scope) , VAR(function scope scope,global scope) & var can re assigned , CONST(block scope)
 var a//ok 
 var a//ok
@@ -11,7 +14,6 @@ var a
 {
     const a = 2 //shadowing
 }
-
 //declaration with out initialization
 var a//ok
 let b//ok
@@ -29,6 +31,16 @@ var a = 10
 let b = 10
 const c = 10
 console.log(c)
+
+// null vs nan vs undefined 
+//NaN : is not a number,type is number,
+function sample(num1, num2) {
+    return num1 + num2
+}
+sample("aaa", 2)  //output : NaN
+//undefine : value is not set in variable,
+//null : value is set in variable but it is empty,type is object : var a = null //ok
+//void is nothing there completely absent but undefine is not define but it is a value
 
 // HOC (Higher order Component) a component takes a component as props and return a component
 import './App.css';
@@ -62,23 +74,89 @@ function Counter() {
 export default App;
 
 // higher order function(HOF) ??
-//higher order function (Higher Orders Functions are functions that perform operations on other functions.)example MAP() FILTER() REDUCE()
+//higher order function (Higher Orders Functions are functions that perform operations on other functions.)example MAP() FILTER() REDUCE(). A Higher-Order function is a function that receives a function as an argument or returns the function as output.
+//For example, Array.prototype.map, Array.prototype.filter and Array.prototype.reduce are some of the Higher-Order functions built into the language.
 const ex = function x() {
     console.log("111")
 }
     (function y() { ex() })
+//    Without Higher-order function
+
+const arr1 = [1, 2, 3];
+const arr2 = [];
+for (let i = 0; i < arr1.length; i++) {
+    arr2.push(arr1[i] * 2);
+}
+// prints [ 2, 4, 6 ]
+console.log(arr2);
+//    With Higher-order function map
+const arr1 = [1, 2, 3];
+const arr2 = arr1.map(function (item) {
+    return item * 2;
+});
+console.log(arr2);
+//Without Higher-order function
+const persons = [
+    { name: 'Peter', age: 16 },
+    { name: 'Mark', age: 18 },
+    { name: 'John', age: 27 },
+    { name: 'Jane', age: 14 },
+    { name: 'Tony', age: 24 },
+];
+const fullAge = [];
+for (let i = 0; i < persons.length; i++) {
+    if (persons[i].age >= 18) {
+        fullAge.push(persons[i]);
+    }
+}
+console.log(fullAge);
+//With Higher-order function filter
+const persons = [
+    { name: 'Peter', age: 16 },
+    { name: 'Mark', age: 18 },
+    { name: 'John', age: 27 },
+    { name: 'Jane', age: 14 },
+    { name: 'Tony', age: 24 },
+];
+const fullAge = persons.filter(person => person.age >= 18);
+console.log(fullAge);
 
 // datatypes ??
-// function declaration ??
-// function expression ??
+// function declaration ??Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon).
+function functionName(parameters) {
+    // code to be executed
+}
+function myFunction(a, b) {
+    return a * b;
+}
+// function expression ??After a function expression has been stored in a variable, the variable can be used as a function:
+const x = function (a, b) { return a * b };
+let z = x(4, 3);
 
 // IIFF ?? 
+//An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. 
+(function () {
+    // …
+})();
+
+(() => {
+    // …
+})();
+
+(async () => {
+    // …
+})();
 const ex1 = function x() {
     console.log("111")
 }
     (function y() { ex1() })
 
-// first class function ??  ( Pass a function as an Argument) treated like variable
+// first class function ??  ( Pass a function as an Argument) treated like variable,when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+const foo = () => {
+    console.log("foobar");
+};
+foo(); // Invoke it using the variable
+// foobar
 function sayHello() {
     return "Hello, ";
 }
@@ -88,6 +166,12 @@ function greeting(helloMessage, name) {
 greeting(sayHello, "JavaScript!");
 // Pass `sayHello` as an argument to `greeting` function
 // Output -- Hello, JavaScript!
+//Returning a function
+function sayHello() {
+    return () => {
+        console.log("Hello!");
+    };
+}
 
 // call back function??
 const paymentSuccess = true
@@ -290,6 +374,7 @@ for (let i = 0; i < 5; i++) {   //output 0,1,2,3,4
 //////////////////////--------- Level 1 Questions-----------/////////////////////
 
 // scope ??
+//hoisting??
 // event loop ??
 // call stack ??
 // call back quee ??
@@ -367,8 +452,19 @@ arr.prototype.myReduce = function (cb, initialValue) {
     return accumulator;
 };
 
-//Generator Function ??
+//Generator Function ??The function* declaration (function keyword followed by an asterisk) defines a generator function, which returns a Generator object.but whenever it needs to generate a value, it does so with the yield keyword rather than return. 
+function* generator(i) {
+    yield i;
+    yield i + 10;
+}
 
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
 //////////////////////---------Difrence-----------/////////////////////
 
 // map() vs forEach()
@@ -387,7 +483,7 @@ const result22 = numbers.forEach((item) => {
 console.log(multiplyThree, exForEach, arr)
 
 // for vs forEach
-//for just loop through the array item initialized from any index is flexible, forEach() have a callback function,for each is more faster then 
+//for just loop through the array item initialized from any index is flexible, forEach() have a callback function,for each is more faster then for
 var arr = [3, 5, 2, 7, 45, 7]
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i])
@@ -396,23 +492,11 @@ arr.forEach((val) => {
     console.log(val)
 })
 
-// var VS let VS const
-//var : function scope , hoisting possible 
-//let : block scope
-//const : block scope + value never change
 // traditional function vs arrow function
-// null vs nan vs undefined 
-//NaN : is not a number,type is number,
-function sample(num1, num2) {
-    return num1 + num2
-}
-sample("aaa", 2)  //output : NaN
-//undefine : value is not set in variable,
-//null : value is set in variable but it is empty,type is object : var a = null //ok
 
 // while vs doWhile 
 
-// spread vs rest
+
 
 ///////////////// Advance Concepts /////////////////////
 
@@ -482,9 +566,9 @@ const output = {
 console.log("aqq", output)
 
 //----------- ES 2021 -----------
+//1.GlobalThis
 
-
-////////////////////////-------CODE SNEPETS Questions--------//////////////////////////////
+///////////////////-------CODE SNEPETS Questions--------////////////////
 
 //array to string convert
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -512,7 +596,7 @@ for (i = 0; i < array.length; i++) {
         largest = array[i];
     }
 }
-
+console.log(largest);
 //find 2nd highest element in array 
 var secondMax = function () {
     var arr = [20, 120, 111, 215, 54, 78]; // use int arrays
@@ -520,6 +604,12 @@ var secondMax = function () {
     arr.splice(arr.indexOf(max), 1); // remove max from the array
     return Math.max.apply(null, arr); // get the 2nd max
 };
+var arr = [20, 120, 111, 215, 54, 78];
+var max = Math.max.apply(null, arr);
+console.log("first MAX ", max);
+arr.splice(arr.indexOf(max), 1);
+var secondMax = Math.max.apply(null, arr);
+console.log("first MAX ", secondMax);
 
 // reverse a array , reverse a string 
 // sort a array (high to low)
@@ -692,6 +782,22 @@ for (element in arrEx2) {
 const arrEx3 = 'I LOVE CODE' //etaret through all charecters
 for (element2 of arrEx3) {
     console.log(element2)
+}
+
+//ForEach(),method calls a function for each element in an array.,method calls a function for each element in an array.
+//syntex - > array.forEach(function(currentValue, index, arr), thisValue)
+const numbers = [65, 44, 12, 4];
+numbers.forEach(myFunction)
+
+function myFunction(item, index, arr) {
+    arr[index] = item * 10;
+}
+let sum = 0;
+const numbers = [65, 44, 12, 4];
+numbers.forEach(myFunction);
+
+function myFunction(item) {
+    sum += item;
 }
 ////////////////////////-------OutPut Base Questions--------//////////////////////////////
 
