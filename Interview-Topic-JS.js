@@ -483,7 +483,7 @@ const result22 = numbers.forEach((item) => {
 console.log(multiplyThree, exForEach, arr)
 
 // for vs forEach
-//for just loop through the array item initialized from any index is flexible, forEach() have a callback function,for each is more faster then for
+//for just loop through the array item initialized from any index is flexible, forEach() have a callback function,methods perform operate on every array item.for each is more faster then for 
 var arr = [3, 5, 2, 7, 45, 7]
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i])
@@ -585,7 +585,43 @@ var arr22 = ["apple", "mango", "Banana",
     "orange", "mango", "mango"];
 function removeDuplicates(arr) {
     return arr22.filter((item,
-        index) => arr.indexOf(item) === index);
+        index) => arr.indexOf(item) === index);//indexOf() return 1 for true -1 for false
+    //OR
+    var arr = ["apple", "mango", "apple",
+        "orange", "mango", "mango"];
+
+    function removeDuplicates(arr) {
+        return [...new Set(arr)];
+    }
+
+    console.log(removeDuplicates(arr));
+    //OR 
+    var arr = ["apple", "mango",
+        "apple", "orange", "mango", "mango"];
+
+    function removeDuplicates(arr) {
+        var unique = [];
+        arr.forEach(element => {
+            if (!unique.includes(element)) {
+                unique.push(element);
+            }
+        });
+        return unique;
+    }
+    console.log(removeDuplicates(arr));
+    //OR
+    var arr = ["apple", "mango",
+        "apple", "orange", "mango", "mango"];
+
+    function removeDuplicates(arr) {
+        var unique = arr.reduce(function (acc, curr) {
+            if (!acc.includes(curr))
+                acc.push(curr);
+            return acc;
+        }, []);
+        return unique;
+    }
+    console.log(removeDuplicates(arr));
 }
 
 //find highest element in array 
@@ -611,7 +647,23 @@ arr.splice(arr.indexOf(max), 1);
 var secondMax = Math.max.apply(null, arr);
 console.log("first MAX ", secondMax);
 
-// reverse a array , reverse a string 
+// reverse a array
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.reverse();//.reverse() change the original array
+function reverseArr(input) {
+    var ret = new Array;
+    for (var i = input.length - 1; i >= 0; i--) {
+        ret.push(input[i]);
+    }
+    return ret;
+}
+
+var a = [3, 5, 7, 8]
+console.log(0 >= 0)
+console.log(a1[0])
+var b = reverseArr(a1);
+console.log(b)
+// reverse a string 
 // sort a array (high to low)
 console.log("sort", arr.sort((function (a, b) {
     if (a > b) {
@@ -635,7 +687,16 @@ console.log("sort", arr.sort((function (a, b) {
 })))
 
 // search a array element
+const array = [10, 11, 3, 20, 5];
 
+const greaterThanTen = array.find(element => element > 10); //find only return 1 element
+const array = [10, 11, 3, 20, 5];
+
+const greaterThanTen2 = array.filter(element => element > 10);
+
+console.log(greaterThanTen2) //[11, 20]
+
+console.log(greaterThanTen)//11
 // filter a array
 // filter run condition on each element of array and pushed in output array
 const len = arr.filter((item) => {
