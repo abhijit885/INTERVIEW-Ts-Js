@@ -3,6 +3,7 @@
 //Xcode version : 12.4
 //@react-navigation/native : V5 ,V6
 // netive app vs hybrid app
+// what is safeAreaView
 // yarn VS npm
 // touchableOpacity vs button
 // scrollView vs flatlist
@@ -40,17 +41,17 @@
 // 8.Use Scrollview to render a huge list of data items
 //////////////////////--------- Plugins -----------/////////////////////
 
-// payment getway 
+// payment getway
 //1.React-Native-Stripe
 //2.React-Native-Razorpay
 
-//3.Chat socket.io and firebase chat 
+//3.Chat socket.io and firebase chat
 
 // Authentication
 //1.Api Auth
 //2.React-native-google-signIn/google-signin
 //3.React-native-fb sdk
-//4.react-native-apple-authentication 
+//4.react-native-apple-authentication
 
 //Thunk for middleware : => Redux is a state management tool, which is used to store the state of different variables in our react application. It makes complex react applications easier by centralizing the application state. You can learn more about redux here. Redux supports middleware, and middleware functions run between dispatching an action and the moment it reaches the reducer. Redux middlewares can be used for logging, routing, asynchronous actions, etc.
 
@@ -77,7 +78,7 @@
 //react-queary : => React Query is a lightweight, yet powerful library for fetching and caching data in React applications. It is designed to simplify the process of retrieving and managing data and to improve the performance of your application.
 //First, React Query is a convenient tool for managing and fetching data in a React application. It provides features like automatic caching, background updates, and the ability to easily retry failed requests, which can make it easier to build performant and user-friendly applications.React Query and Axios can provide a powerful combination for fetching and managing data in a React application. React Query can handle all of the complex logic for caching, updating, and retrying requests, while Axios can be used to actually make the requests to the server. This can make it easier to build robust and maintainable applications.
 
-//Flipper debug tool 
+//Flipper debug tool
 
 //Hermes : => Hermes is a new JavaScript engine used by React Native which gives massive performance boosts and apk size boost to React Native by packing loads of useful features from precompiling JavaScript to bytecode to reduced footprint of running JavaScript on mobile devices!
 
@@ -101,7 +102,7 @@
 //     test: "jest"
 // }
 // 5. npm run test
-// // function test : => 
+// // function test : =>
 // function sum(a, b) {
 //     return a + b
 // }
@@ -111,11 +112,11 @@
 //     expect(sum(2, 3)).toBe(4)
 // })
 // //.notToBe()
-// // Object test : => 
+// // Object test : =>
 // test("Output Test", () => {
 //     expect(sum(2, 3)).toEqual({ name: 'Abhijit', Roll: 5 })
 // })
-// // Callback function test : => 
+// // Callback function test : =>
 // function fetch(back) {
 //     return back("hello")
 // }
@@ -131,7 +132,7 @@
 //     }
 //     fetch(callback)
 // })
-// // Promise function test : => 
+// // Promise function test : =>
 // function fetchData() {
 //     return new Promise((resolve, reject) => {
 //         resolve("hello")
@@ -145,28 +146,28 @@
 
 // Android and Ios App build process
 // ANDROID :->
-// Run project => reactnative run android 
-//  bundle debug => gradlew assemble release 
+// Run project => reactnative run android
+//  bundle debug => gradlew assemble release
 //  upload in playstore => keystore generate ,keymame key_aliases ,add keystore in android app
 //  bundle release => ./gradlew bundlerelease
 
 //IOS :->
 // 1. Pod install
-// 2. apple devloper account create 
+// 2. apple devloper account create
 // create certifecat (3types of certifecat there)
 // P12 file create
-// distribution certifecate => build and Push 
-// devlopment cerifecate => build and .ipa 
-// enterprize certifecat => in house app test 
-// 3. in keystore .P12 will install 
-// 4. .xcworkspace open 
-// project folder from left side 
-// signing and capability  add account 
+// distribution certifecate => build and Push
+// devlopment cerifecate => build and .ipa
+// enterprize certifecat => in house app test
+// 3. in keystore .P12 will install
+// 4. .xcworkspace open
+// project folder from left side
+// signing and capability  add account
 // 5. again folder -> info.pList version update
-// 6. generic/any ios device -> Product -> Archive 
-// 7. to .ipa created distribution -> build -> upload to test flight 
+// 6. generic/any ios device -> Product -> Archive
+// 7. to .ipa created distribution -> build -> upload to test flight
 
-// if keystore loose what will do : => 
+// if keystore loose what will do : =>
 //Keep your keystore and private key in a safe and secure place, and ensure that you have secure backups of them. If you publish an app to Google Play and then lose the key with which you signed your app, you will not be able to publish any updates to your app, since you must always sign all versions of your app with the same key.There's no way to recover your key . Lost my keystore for uploaded app on android market .So finally, Its not possible. Please Create new keystore with the application with different package name and version and publish as a new application.
 
 // if IOS or ANDROID folder deleted use -> react-native upgrade commend
@@ -193,8 +194,7 @@
 
 // Firebase Service (social login ,CRUD operation,notifecation)
 
-// Local Storage @react-native-async-storage/async-storage 
-
+// Local Storage @react-native-async-storage/async-storage
 
 //////////////////////--------- Styles -----------/////////////////////
 // react native use StyleSheet component for styleing
@@ -206,7 +206,7 @@
 // })
 //Horizontal : left to right,x axis
 //Vertical : up to Down , y axis
-//flexDirection: 'row' //x axis ,horizontayy 
+//flexDirection: 'row' //x axis ,horizontayy
 // Flex for layout the element ,use primary and secoendary axis concept default axis is column //y axis ,verticaly,top to bottom
 // display:'flex',
 // flex : 1 //take the full area     //according to primary access
@@ -220,8 +220,7 @@
 
 //////////////////////--------- Descriptions -----------/////////////////////
 
-
-//Simple component 
+//Simple component
 //pass data child component to parent and parent to child
 
 //Lifecycle methods order of execution
@@ -236,6 +235,60 @@
 // 3 way components are render 1.state changes, 2. props are receive changes, 3.parent is render child component will re - render
 // control vs unControl component
 // control component control by the react component bu using onChange and value er get the value and chenge the input tezt value ex: useState, and uncontrol component control by DOM ex: useRef
+
+//PROPS
+import React, { FC } from "react";
+import { Dimensions, StyleSheet, View, TextInput } from "react-native";
+const { height, width } = Dimensions.get("screen");
+interface Props {
+  placeholder: string;
+  onChangeText: (text: string) => void;
+  secureTextEntry?: boolean;
+  btnStyle?: {};
+  placeholderTextColor: string;
+  icon?: string | undefined;
+}
+const TextInputs: FC<Props> = (props) => {
+  return (
+    <View style={{}}>
+      <TextInput
+        style={{ ...style.input, ...props.btnStyle }}
+        placeholder={props.placeholder}
+        onChangeText={props.onChangeText}
+        secureTextEntry={props.secureTextEntry || false}
+        placeholderTextColor={props.placeholderTextColor}
+      />
+    </View>
+  );
+};
+const style = StyleSheet.create({
+  container: {
+    width: width / 1.1,
+    alignSelf: "center",
+    borderRadius: 5,
+    backgroundColor: "#000000",
+  },
+  input: {
+    height: 60,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    backgroundColor: "#eafafc",
+    borderColor: "#1b94c4",
+    borderRadius: 10,
+  },
+});
+export default TextInputs;
+
+<TextInputs
+  placeholder="enter Password"
+  placeholderTextColor="#1b94c4"
+  secureTextEntry={true}
+  onChangeText={(e) => setData({ ...data, password: e })}
+  btnStyle={{
+    borderColor: validate && data.password === "" ? "red" : "#1b94c4",
+  }}
+/>;
 
 //HOOKS
 //UseState hook
@@ -319,7 +372,6 @@
 //         );
 //     }
 
-
 // //customHook
 // A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks.
 // remove the duplicat logic from a compoment and extract the logic in custom hook is like HOC component
@@ -373,4 +425,3 @@
 //         )
 //     }
 //     export default App
-

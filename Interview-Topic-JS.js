@@ -725,7 +725,20 @@ console.log("sort", arr.sort((function (a, b) {
     }
 })))
 // remove duplicate elements from string 
+//Frecuency of charecters in a given string 
 //find smallest element in array 
+const numbers2 = [2, 5, 9, 1, 6, 7, 4, 8, 0];
+let result2 = numbers2[0]
+for (i = 0; i < numbers2.length; i++) {
+    if (numbers2[i] < result) {
+        result2 = numbers2[i]
+    }
+}
+console.log(result);
+//OR
+const numbers3 = [5, 9, 6, 7, 2, 4, 8];
+const result3 = Math.min.apply(Math, numbers3);
+console.log(result3);
 //find 2nd smallest element in array 
 
 //--------Array Build in Functions---------
