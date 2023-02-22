@@ -151,24 +151,23 @@ interface user {
 
  //Abstract Class =>
 
- //Generic is a block of code reusable for type ,interface
+ //Generic is a block of code reusable for type ,interface ,is like a variable use in type
  //Generic in type => taking the type from user like a variable in <T>
  const addID = <T>(obj: T) => {
    let id = Math.floor(Math.random()* 100)
    return {...obj ,id}
  }
- const user =addID({
+ const user22 =addID({
    name:'abhijit',
    age:40,
    country:'india'
  })
 
- const addID2 = <T extends {
+ const addID3 = <T extends {
    name:string;
    age:number;
    country:string
- }
- >(obj: T) => {
+ }>(obj: T) => {
    let id = Math.floor(Math.random()* 100)
    return {...obj ,id}
  }
@@ -187,7 +186,7 @@ interface user {
  const response : APIResponse<object> = {
    status:200,
    type:'good',
-   data:{
+   data:{  
       name:"text",
       something:300
    }
@@ -200,5 +199,21 @@ interface user {
 //Generics Classes =>
 
 //Type Narrowing => (IN,AS,InstanceOf,TypeOf,Kind)
+//IN
+in is a JavaScript operator that can be used to check whether a property belongs to a particular object.
+The expression returns true or false depending on whether the property belongs to the object.
+//AS
+That is not vanilla JavaScript, it is TypeScript. as any tells the compiler to consider the typed object as a plain untyped JavaScript object.
 
+The as keyword is a Type Assertion in TypeScript which tells the compiler to consider the object as another type than the type the compiler infers the object to be.
+//TypeOf
+JavaScript already has a typeof operator you can use in an expression context:
+
+// Prints "string"
+console.log(typeof "Hello world");
+Try
+TypeScript adds a typeof operator you can use in a type context to refer to the type of a variable or property:
+
+let s = "hello";
+let n: typeof s;
 

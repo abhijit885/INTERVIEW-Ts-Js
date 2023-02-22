@@ -3,9 +3,26 @@
 //Xcode version : 12.4
 //@react-navigation/native : V5 ,V6
 // netive app vs hybrid app
-// what is safeAreaView
+
+// what is safeAreaView : SafeAreaView renders nested content and automatically applies padding to reflect the portion of the view that is not covered by navigation bars, tab bars, toolbars, and other ancestor views. Moreover, and most importantly, Safe Area's paddings reflect the physical limitation of the screen, such as rounded corners or camera notches (i.e. the sensor housing area on iPhone 13).
+
 // yarn VS npm
-// touchableOpacity vs button
+// What is Yarn?
+// Facebook developed Yarn in 2016 as a replacement for NPM. It was designed to offer more advanced features that NPM lacked at the time (such as version locking) and create a more secure, stable, and efficient product.
+
+// However, since Yarn was released, NPM has added several crucial features. In its current state, Yarn is now more of an alternative to NPM rather than a replacement.
+
+// What is NPM?
+// NPM is the default package manager for Node.js with a CLI tool that helps install, manage, and remove Node.js packages. It also enables users to share open-source Node.js packages.
+
+// touchableOpacity vs button vs pressable
+// Pressable was a new introduction to RN 0.63, prior to that,Touchable Opacity was the most common used Component to wrap a component or simliar components.
+// Both their basic functionalities are same, to make a text/image clickable and user interactive.
+// But with Pressable you get to access a lot new props like :
+// HitRect, which is such a cool feature, acc to docs :
+
+//A basic button component that should render nicely on any platform. Supports a minimal level of customization.
+
 // scrollView vs flatlist
 // ScrollView loads all the content,the data to be displayed on screen all at once.it would automatically cause performance issues
 // Flatlist It shows only those elements that are currently being displayed on the screen.
@@ -39,6 +56,12 @@
 // 5.Use Flipper to debug issues
 // 7. Leave console statements in the source code
 // 8.Use Scrollview to render a huge list of data items
+
+//threads om react native
+1.Main threads :(3rd) render the view 
+2.shadow threads :(2nd) send the view, and it calculet the height with 
+3.js threads :(1st) compile all code and execute 
+
 //////////////////////--------- Plugins -----------/////////////////////
 
 // payment getway
@@ -220,7 +243,8 @@
 
 //////////////////////--------- Descriptions -----------/////////////////////
 
-//Simple component
+//Simple component :is a 
+
 //pass data child component to parent and parent to child
 
 //Lifecycle methods order of execution
