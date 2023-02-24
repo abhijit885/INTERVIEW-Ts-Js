@@ -28,7 +28,7 @@ Here the sequence to follow when using git stash:
 5.Commit and (optionally) push to remote.
 6.Check out branch A.
 7.Run git stash pop to get your stashed changes back.
-
+also move the changes one branch to another branch by git stash and git stash pop
 1.git init
 2.git add .
 3.git commit -m "message"

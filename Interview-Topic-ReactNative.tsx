@@ -4,7 +4,12 @@
 //@react-navigation/native : V5 ,V6
 // netive app vs hybrid app
 //how to reduce the app size? 
+1.//Hermes : => Hermes is a new JavaScript engine used by React Native which gives massive performance boosts and apk size boost to React Native by packing loads of useful features from precompiling JavaScript to bytecode to reduced footprint of running JavaScript on mobile devices!
+
 //how to improve react native app performance 
+1.//Hermes : => Hermes is a new JavaScript engine used by React Native which gives massive performance boosts and apk size boost to React Native by packing loads of useful features from precompiling JavaScript to bytecode to reduced footprint of running JavaScript on mobile devices!
+2.Flash List instid of FlatList
+
 // what is safeAreaView : SafeAreaView renders nested content and automatically applies padding to reflect the portion of the view that is not covered by navigation bars, tab bars, toolbars, and other ancestor views. Moreover, and most importantly, Safe Area's paddings reflect the physical limitation of the screen, such as rounded corners or camera notches (i.e. the sensor housing area on iPhone 13).
 
 // yarn VS npm
