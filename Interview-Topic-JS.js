@@ -1,22 +1,57 @@
 //////////////////////--------- Level 2-----------/////////////////////
 // var VS let VS const
-//var : function scope , hoisting possible 
+//var : function scope , hoisting possible ,global scope, can re assigned 
 //let : block scope
 //const : block scope + value never change
-//LET(block scope) , VAR(function scope scope,global scope) & var can re assigned , CONST(block scope)
+//Scope 
+var a = 6
+console.log(a) //ok
+{
+    var a = 6
+}
+console.log(a) //ok 
+{
+    let a = 6
+}
+console.log(a) //error also for const
+let a = 4
+console.log(a)
+const a = 4
+console.log(a)
+//es6 scop + shadowing
+function test() { //shadowing
+    let a = "Hello"
+    if (true) {
+        let a = "Hi"
+        console.log(a)
+    }
+    console.log(a)
+}
+test()
+function test2() {
+    var a = "Hii"
+    let b = "Byy"
+    if (true) {
+        let a = "Hii"
+        var b = "Byy"
+        console.log(a) //shadowing
+        console.log(b) //Illigal shadowing
+    }
+}
+//declaration let and const not be declear in same scopr var can 
 var a//ok 
 var a//ok
 let a
-let b //ok
+let a //error
 const a
-const b //error
+const a //error 
 var a
 {
     const a = 2 //shadowing
 }
 //declaration with out initialization
 var a//ok
-let b//ok
+let b//error
 const a //error
 const a = 5 //ok
 //re-initialization
@@ -27,11 +62,24 @@ const a = 3
 a = 4         //error
 let a = 3
 a = 6        //ok
-var a = 10
-let b = 10
-const c = 10
-console.log(c)
+//hosting => declear all vereable top of the code at creation phase
 
+console.log(aa, BB)
+const aa = 10
+let BB = 10 //hested in temoiral ded zone (we get it in scrept section in inspect => console =>sources =>add breakpoint and run ) output undefind
+console.log(aa)
+var aa = 10 //hested output undefind 
+//JS execution context have 2 things(creation phase, execution phase)
+
+// temporal dead zone ??
+is the time between decration and initialization(in the scope but not yeat declared) let and const veriable
+const and let are hosted in temporal ded zone
+function name() {
+    console.log(AA, BB, CC) //AA=undefind initize the function but not initalize the veriable yeat
+    const AA = 20
+    let BB = 30
+    var CC = 40
+}
 // null vs nan vs undefined 
 //NaN : is not a number,type is number,
 function sample(num1, num2) {
@@ -424,7 +472,7 @@ function subscribe() {
 subscribe()
 
 // illegal Shadowing ??
-// temporal dead zone ??
+
 
 // Polyfill for map() FILTER() REDUCE() ??
 //Polyfill for map()

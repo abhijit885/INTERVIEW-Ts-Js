@@ -3,19 +3,43 @@
 //Xcode version : 12.4
 //@react-navigation/native : V5 ,V6
 // netive app vs hybrid app
+1.Native app : platform spacifec java,kotlin,objective C
+2.Hybred app : reactNative ,Flutter its open in native browser in android and ios device 
 //how to reduce the app size? 
 1.//Hermes : => Hermes is a new JavaScript engine used by React Native which gives massive performance boosts and apk size boost to React Native by packing loads of useful features from precompiling JavaScript to bytecode to reduced footprint of running JavaScript on mobile devices!
+2.Open up android/app/build.gradle
+Set def enableProguardInReleaseBuilds = true this would enable Progaurd to compress the Java Bytecode. This reduces the app size by a tad bit
+Set def enableSeparateBuildPerCPUArchitecture = true . Android devices support two major device artitectures armebi and x86. By default RN builds the native librariers for both these artitectures into the same apk.
+
+After reading through React Native official docs we found that All the apps from Google Playstore work's on different ABI such as
+
+armeabi-v7a
+arm64-v8a
+x86
+x86_64
+So in order to support all the above ABI's react-native by default creates a Universal APK which contains files required for different device configuration into a single apk which bloated the apk size to 23 MB.
+
+What is an ABI 🤔 ?
+Different Android devices use different CPUs, which in turn support different instruction sets. Each combination of CPU and instruction set has its own Application Binary Interface (ABI).
+
+How did we reduce our apk size?
+Instead of Generating a Universal apk we switched to a completely new Publishing format called .aab
+
+After generating aab file and uploading to Google Playstore, The Application size reduced drastically by 70% and App size to 7.29 MB from 23 MB 🍻
+3.minimum 3rd party librery use 
 
 //how to improve react native app performance 
 1.//Hermes : => Hermes is a new JavaScript engine used by React Native which gives massive performance boosts and apk size boost to React Native by packing loads of useful features from precompiling JavaScript to bytecode to reduced footprint of running JavaScript on mobile devices!
+
 2.Flash List instid of FlatList
 
-// what is safeAreaView : SafeAreaView renders nested content and automatically applies padding to reflect the portion of the view that is not covered by navigation bars, tab bars, toolbars, and other ancestor views. Moreover, and most importantly, Safe Area's paddings reflect the physical limitation of the screen, such as rounded corners or camera notches (i.e. the sensor housing area on iPhone 13).
+3.flatList instid of scrollView
+
+// what is safeAreaView : Moreover, and most importantly, Safe Area's paddings reflect the physical limitation of the screen, such as rounded corners or camera notches (i.e. the sensor housing area on iPhone 13).
 
 // yarn VS npm
 // What is Yarn?
 // Facebook developed Yarn in 2016 as a replacement for NPM. It was designed to offer more advanced features that NPM lacked at the time (such as version locking) and create a more secure, stable, and efficient product.
-
 // However, since Yarn was released, NPM has added several crucial features. In its current state, Yarn is now more of an alternative to NPM rather than a replacement.
 
 // What is NPM?
@@ -41,6 +65,7 @@
 // 1.react-native-share-element for transitions using react navigation inrernally and share element will use in all stack screens
 // 2.react-native-Animatable, it is used in all image, view, text by animatable.its propertys are animation = { 'slideInUp'}, duration, delay, direction, easing
 //3.react-navigation-shared-element - changes in stack-navigation
+
 // high resolution image optimize
 // react-native-image-resizer props are  imageUri,newWidth,newHeight,compressFormat,quality
 // react-native-image-picker props are  maxWidth: 500, maxHeight: 500, quality: 0.5,
@@ -61,7 +86,7 @@
 // 4.Use nativeDriver with Animated library ex: -> animeted
 // 5.Use Flipper to debug issues
 // 7. Leave console statements in the source code
-// 8.Use Scrollview to render a huge list of data items
+// 8.Use FlatList to render a huge list of data items
 
 //threads om react native
 1.Main threads :(3rd) render the view 
@@ -72,9 +97,22 @@
 
 // payment getway
 //1.React-Native-Stripe
+The Stripe React Native SDK allows you to build payments into your native Android and iOS apps using React Native. We provide powerful and customisable UI screens and elements that you can use out-of-the-box to collect your users’ payment details.
+<StripeProvider
+      publishableKey="pk_test_51BTUDGJAJfZb9HEBwDg86TN1KNprHjkfipXmEDMb0gSCassK5T3ZfxsAbcgKVmAIXF7oZ6ItlZZbXO6idTHE67IM007EwQ4uN3"
+      urlScheme="your-url-scheme" // required for 3D Secure and bank redirects
+      merchantIdentifier="merchant.com.{{YOUR_APP_NAME}}" // required for Apple Pay
+    >
+      // Your app code here
+    </StripeProvider>
 //2.React-Native-Razorpay
 
 //3.Chat socket.io and firebase chat
+Use an open-socket (Websockets) to get information directly from the server when a new bid arrives.
+
+In this article I will talk about Websockets and specifically on the Node.js library - Socket.io
+
+Socket.io is a popular JavaScript library that allows us to create real-time, bi-directional communication between software applications and a Node.js server.
 
 // Authentication
 //1.Api Auth
@@ -86,15 +124,29 @@
 
 //For the scope of this tutorial, we will focus on a redux middleware called thunk. It allows us to return functions instead of objects from redux actions. Plain redux doesn’t allow complex logic inside action functions, you can only perform simple synchronous updates by dispatching actions. This middleware extends its ability and lets you write complex logic that interacts with the store. Thunk doesn’t interfere with the action until it returns a function
 
+for state management we use redux and redux toolkit
+with out it we have to pass props parent chaid (props drilling) can also cantext API by using use reducer hook there have provider and consumer 
+redux toolkit have createSlice() which have all initial state and action here action type is the reducer name automaticaly created 
+createSlice
+ConfigureStore
+actionCreator
+creatAction
+useDispatch 
+useSelector 
+
 //Redux-Toolkit
 // Redux is a Javascript global state management library designed to act as a central store for managing application states. Redux helps build apps that behave consistently across all environments by providing a system to track all changes made to the state.
 
-// Action
-// An action is a simple object that indicates a desire to modify a state in the Redux store. It is required that actions specify a payload and a type attribute that describes what kind of change is to be made to the state. Actions require reducers to be successfully carried out.
+// Action mins : => what to do ?
+// An action is a simple object that indicates a desire to modify a state in the Redux store. It is required that actions specify a payload and a type attribute that describes what kind of change is to be made to the state. Actions require reducers to be successfully carried out. 
+return{
+  type :'INCREMENT',
+  paylode: num
+}
 
-// Reducer
+// Reducer mins : => How to do ? it contain state and action 
 // A reducer is a pure function that takes two arguments; the current state and an action to return a new state result. Reducers don't modify the original state directly; rather, they make a copy of the state and modify that.
-
+state is readOnly only way to change state dispatch a action.
 // Dispatch
 // A function that accepts either a synchronous or asynchronous action object and sends it to a reducer for execution.
 
@@ -107,7 +159,7 @@
 //react-queary : => React Query is a lightweight, yet powerful library for fetching and caching data in React applications. It is designed to simplify the process of retrieving and managing data and to improve the performance of your application.
 //First, React Query is a convenient tool for managing and fetching data in a React application. It provides features like automatic caching, background updates, and the ability to easily retry failed requests, which can make it easier to build performant and user-friendly applications.React Query and Axios can provide a powerful combination for fetching and managing data in a React application. React Query can handle all of the complex logic for caching, updating, and retrying requests, while Axios can be used to actually make the requests to the server. This can make it easier to build robust and maintainable applications.
 
-//Flipper debug tool
+//Flipper :=> debug tool
 
 //Hermes : => Hermes is a new JavaScript engine used by React Native which gives massive performance boosts and apk size boost to React Native by packing loads of useful features from precompiling JavaScript to bytecode to reduced footprint of running JavaScript on mobile devices!
 
@@ -216,8 +268,6 @@
 // 11.connect Provisioning Profiles
 
 // import Scripts vartual scroll view
-
-// cashing in RN
 
 // Google all services Map,Google Login,Facebook Login IN APP INTEGRATION
 

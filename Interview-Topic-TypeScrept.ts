@@ -77,7 +77,7 @@ let userDetails : (id:number|string,userInfo:{
 userDetaile = (id:number,user:{
    name:string,
    age:number
-})
+}) 
 //array 
 const User:number[] = []
 const User2:string[] = []
