@@ -1,4 +1,4 @@
-//////////////////////--------- Level 2-----------/////////////////////
+//////////////////////--------- Level 1-----------/////////////////////
 // var VS let VS const
 //var : function scope , hoisting possible ,global scope, can re assigned 
 //let : block scope
@@ -121,6 +121,19 @@ function Counter() {
 }
 export default App;
 
+//Curring
+const sum = (x) => {
+    return (y) => {
+        return (z) => {
+            return x + y + z
+        }
+    }
+}
+const sum1 = sum(2)
+const sum2 = sum(3)
+const sum3 = sum(4)
+console.log(sum3)
+
 // higher order function(HOF) ??
 //higher order function (Higher Orders Functions are functions that perform operations on other functions.)example MAP() FILTER() REDUCE(). A Higher-Order function is a function that receives a function as an argument or returns the function as output.
 //For example, Array.prototype.map, Array.prototype.filter and Array.prototype.reduce are some of the Higher-Order functions built into the language.
@@ -170,6 +183,14 @@ const fullAge = persons.filter(person => person.age >= 18);
 console.log(fullAge);
 
 // datatypes ??
+1. String
+2. Number
+3. Bigint
+4. Boolean
+5. Undefined
+6. Null
+7. Symbol
+8. Object
 // function declaration ??Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon).
 function functionName(parameters) {
     // code to be executed
@@ -772,6 +793,27 @@ console.log("sort", arr.sort((function (a, b) {
         return 0
     }
 })))
+//list of repete element and there count
+let arr = [2, 6, 2, 9, 9, 7, 3, 4, 3, 6, 5, 2, 6, 7, 4, 3, 7]
+y = arr.sort()
+let counter = 1;
+y.map((item, index) => {
+    if (y[index] == y[index + 1]) {
+        counter = counter + 1
+    } else {
+        console.log(item + "is" + counter + "times");
+        counter = 1
+    }
+})
+const XX = [1, 2, [3, 4, [5, 6]]]
+//output = [1,2,3,4,5,6]
+const y = XX.toString()
+const yy = y.slice(",")
+const finalArray = []
+yy.map(item => {
+    finalArray.push(parseInt(item))
+})
+console.log(finalArray)
 // remove duplicate elements from string 
 //Frecuency of charecters in a given string 
 //find smallest element in array 
@@ -953,5 +995,15 @@ console.log(keys)
 console.log(values)
 console.log(entries)
 
+#Eco System(what is the purposes)
+1.webpack is for bundling
+2.babel
 
+JS - threads
+redux thunk
+shalow copy / deep copy
+diffing algorithm(vartual DOM real DOM)
+annonymous function
+class component / functional component
+pure component
 

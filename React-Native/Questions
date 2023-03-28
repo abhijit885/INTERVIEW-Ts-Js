@@ -1,0 +1,108 @@
+JS TOPIC
+1.var VS let VS const
+2.scope (function,global,block)
+3.shadowing
+illegal Shadowing
+4.hosting + temporal dead zone
+5.HOC (Higher order Component)
+6.Curring
+7.higher order function(HOF)
+8.dataTypes
+9.function expression + function declaration
+10.IIFE (Immediately Invoked Function Expression)
+11.first class function
+12.call back function + promise + async Await + 
+13.annonomas function
+14.
+15.
+16.
+17.
+18.event loop ??
+19.call stack ??
+20.call back queue ??
+21.microtask queue ??
+22.lexical scope ??
+23.closer
+Generator Function
+spread operator
+rest operator
+distrcuring
+JS - threads
+
+shalow copy / deep copy
+deepLinking
+diffing algorithm(vartual DOM real DOM)
+
+
+
+
+JS QUESTIONS
+1.null vs nan vs undefined 
+2.build in array function [ indexOf() , find() , findIndex() , filter() , slice() , splice() , conCat() , reduce() , map() , push() ]
+3.build in string function
+4.JS single threaded but how perform call back function
+5.dependency vs Dev dependency
+Polyfill for map()
+map() vs forEach()
+for vs forEach
+traditional function vs arrow function
+while vs doWhile 
+array to string convert
+string to array convert
+remove duplicate elements from array
+find highest element in array 
+find 2nd highest element in array
+reverse a array
+reverse a string 
+sort a array (high to low)
+sort a array (low to high)
+search a array element
+list of repete element and there count
+// remove duplicate elements from string 
+//Frecuency of charecters in a given string 
+//find smallest element in array 
+find 2nd smallest element in array 
+Loop [for , forIn , forOf , forEach] 
+
+
+
+
+
+
+
+
+
+
+REACT-NATIVE QUESTION
+latest version of react-native + Stable version you work
+Xcode version : 12.4
+@react-navigation/native : V5 ,V6
+netive app vs hybrid app
+how to reduce the app size
+how to improve react native app performance 
+memory lik
+what is safeAreaView
+yarn VS npm
+touchableOpacity vs button vs pressable
+scrollView vs flatlist
+how roted screen potret to landscrep
+reactNative animation
+high resolution image optimize
+How to optimize React native code
+threads om react native
+Dark Theeme
+payment gatway & React-Native-Stripe OR React-Native-Razorpay
+Authentication [ Api Auth & React-native-google-signIn/google-signin & React-native-fb sdk & react-native-apple-authentication ]
+Thunk for middleware
+redux and redux toolkit
+react-queary
+testing JEST & Jest unit testing freamwork
+Android and Ios App build process
+if keystore loose what will do
+if IOS or ANDROID folder deleted use
+certifecate create in Ios
+vartual scroll view
+Local Storage @react-native-async-storage/async-storage
+Lifecycle methods order of execution
+Props
+Hooks [UseState , UseEffect , UseRef , UseMemo , UseCallback , customHook]

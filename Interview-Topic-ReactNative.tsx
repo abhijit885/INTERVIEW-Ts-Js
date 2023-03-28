@@ -94,7 +94,7 @@ After generating aab file and uploading to Google Playstore, The Application siz
 3.js threads :(1st) compile all code and execute 
 
 //////////////////////--------- Plugins -----------/////////////////////
-
+//Dark Theeme
 // payment getway
 //1.React-Native-Stripe
 The Stripe React Native SDK allows you to build payments into your native Android and iOS apps using React Native. We provide powerful and customisable UI screens and elements that you can use out-of-the-box to collect your users’ payment details.
