@@ -1,4 +1,4 @@
-JS TOPIC
+**\***JS TOPIC**\***
 1.var VS let VS const
 2.scope (function,global,block)
 3.shadowing
@@ -11,12 +11,8 @@ illegal Shadowing
 9.function expression + function declaration
 10.IIFE (Immediately Invoked Function Expression)
 11.first class function
-12.call back function + promise + async Await + 
+12.call back function + promise + async Await +
 13.annonomas function
-14.
-15.
-16.
-17.
 18.event loop ??
 19.call stack ??
 20.call back queue ??
@@ -33,11 +29,8 @@ shalow copy / deep copy
 deepLinking
 diffing algorithm(vartual DOM real DOM)
 
-
-
-
-JS QUESTIONS
-1.null vs nan vs undefined 
+**\***JS QUESTIONS**\***
+1.null vs nan vs undefined
 2.build in array function [ indexOf() , find() , findIndex() , filter() , slice() , splice() , conCat() , reduce() , map() , push() ]
 3.build in string function
 4.JS single threaded but how perform call back function
@@ -46,45 +39,43 @@ Polyfill for map()
 map() vs forEach()
 for vs forEach
 traditional function vs arrow function
-while vs doWhile 
+while vs doWhile
 array to string convert
 string to array convert
 remove duplicate elements from array
-find highest element in array 
+find highest element in array
 find 2nd highest element in array
 reverse a array
-reverse a string 
+reverse a string
 sort a array (high to low)
 sort a array (low to high)
 search a array element
 list of repete element and there count
-// remove duplicate elements from string 
-//Frecuency of charecters in a given string 
-//find smallest element in array 
-find 2nd smallest element in array 
-Loop [for , forIn , forOf , forEach] 
+remove duplicate elements from string
+Frecuency of charecters in a given string
+find smallest element in array
+find 2nd smallest element in array
+Loop [for , forIn , forOf , forEach]
 
+**\***TS Topic**\***
 
+**\***REACT QUESTION**\***
+Cookies vs Local Storage vs Session Storage
+media Query for web react
+lifecycle methods order of execution
 
-
-
-
-
-
-
-
-REACT-NATIVE QUESTION
+**\***REACT-NATIVE QUESTION**\***
 latest version of react-native + Stable version you work
 Xcode version : 12.4
 @react-navigation/native : V5 ,V6
-netive app vs hybrid app
+native app vs hybrid app
 how to reduce the app size
-how to improve react native app performance 
+how to improve react native app performance
 memory lik
 what is safeAreaView
 yarn VS npm
 touchableOpacity vs button vs pressable
-scrollView vs flatlist
+scrollView vs flatList
 how roted screen potret to landscrep
 reactNative animation
 high resolution image optimize
