@@ -999,8 +999,7 @@ console.log(entries)
 1.webpack is for bundling
 2.babel
 
-JS - threads
-redux thunk
+
 shalow copy / deep copy
 diffing algorithm(vartual DOM real DOM)
 annonymous function
