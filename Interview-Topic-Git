@@ -13,7 +13,7 @@ git add filename -> add individual file in git
 git add . ->add all files in git
 git log -> see all comments till now
 git commit -m "message" ->commit message
-git checkout <"commit message"/"branch Name"> -> switch between commit to commit
+git checkout <"commit message"/"branch Name"> -> switch between commit to commit (switch between branch normaly)
 git branch ->see all branches
 git checkout "branch name" -> move between branches
 git branch "branch name" -> create new branch
