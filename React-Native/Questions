@@ -1,8 +1,7 @@
 **\***JS TOPIC**\***
 1.var VS let VS const
 2.scope (function,global,block)
-3.shadowing
-illegal Shadowing
+3.shadowing & illegal Shadowing
 4.hosting + temporal dead zone
 5.HOC (Higher order Component)
 6.Curring
@@ -11,8 +10,10 @@ illegal Shadowing
 9.function expression + function declaration
 10.IIFE (Immediately Invoked Function Expression)
 11.first class function
-12.call back function + promise + async Await +
-13.annonomas function
+12.call back function
+promise
+async Await
+13.annonomas function => function inside function
 18.event loop ??
 19.call stack ??
 20.call back queue ??
@@ -24,15 +25,47 @@ spread operator
 rest operator
 distrcuring
 JS - threads
-
 shalow copy / deep copy
 deepLinking
 diffing algorithm(vartual DOM real DOM)
 
 **\***JS QUESTIONS**\***
 1.null vs nan vs undefined
-2.build in array function [ indexOf() , find() , findIndex() , filter() , slice() , splice() , conCat() , reduce() , map() , push() ]
-3.build in string function
+2.build in array function [ 
+    toString() ,
+    join() ,
+    pop(), 
+    push(),
+    shift(), 
+    unShift(), 
+    length() ,
+    slice() , 
+    splice() , 
+    concat() , 
+    indexOf() , 
+    find() , 
+    findIndex() , 
+    filter() ,  
+    reduce() , 
+    map() ]
+3.build in string function [ 
+String length
+String slice()
+String substring()
+String substr()
+String replace()
+String replaceAll()
+String toUpperCase()
+String toLowerCase()
+String concat()
+String trim()
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+String charAt()
+String charCodeAt()
+String split()]
 4.JS single threaded but how perform call back function
 5.dependency vs Dev dependency
 Polyfill for map()
@@ -60,6 +93,11 @@ Loop [for , forIn , forOf , forEach]
 **\***TS Topic**\***
 
 **\***REACT QUESTION**\***
+why we use react ? Adventure & Disadvantage 
+Concept of virtual DOM 
+how rendering works in React ?
+contextAPI
+Question on Optimization (Memo, usememo, useCallback)
 Cookies vs Local Storage vs Session Storage
 media Query for web react
 lifecycle methods order of execution
@@ -82,7 +120,7 @@ high resolution image optimize
 How to optimize React native code
 threads om react native
 Dark Theeme
-payment gatway & React-Native-Stripe OR React-Native-Razorpay
+payment gatway [ React-Native-Stripe OR React-Native-Razorpay ]
 Authentication [ Api Auth & React-native-google-signIn/google-signin & React-native-fb sdk & react-native-apple-authentication ]
 Thunk for middleware
 redux and redux toolkit

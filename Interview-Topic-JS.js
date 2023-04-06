@@ -242,7 +242,7 @@ function sayHello() {
     };
 }
 
-// call back function??
+// call back function ? => pass a function as a parameter to another function
 const paymentSuccess = true
 const marks = 90
 const enroll = (callback) => {
@@ -274,6 +274,8 @@ const getCertificate = () => {
 enroll(() => {
     progress(getCertificate)
 })
+
+//Callback Hell
 Example -
     enroll(() => {
         progress((getCertificate) => {
@@ -289,6 +291,21 @@ Example -
         })
     })
 // it is a call back hell which is very difficult to maintain this call backs thats why promises is come to picture common error handel section is catch()
+
+//Asynchronous Function == it takes some time ? => by default JS is synchronous but some time the order of execution need to change that time we use callBack functions which are asynchronous, like the function takes some time to complete the job that place we use asynchronous function after 2 sec function will call. EX : setTimeOut() ,  setInterval() 
+EX: 1
+console.log("line 1")
+setTimeout(() => {
+    console.log("callBack")
+}, 2000);
+console.log("line 3")
+
+EX: 2
+console.log("line 1")
+setTimeout(function () {
+    console.log("callBack")
+}, 2000);
+console.log("line 3")
 
 // promise ??
 const paymentSuccess2 = true
@@ -326,7 +343,7 @@ const getCertificate2 = () => {
             resolve("Congratulation....")
         }, 2000)
     })
-    return promise
+    return
 }
 enroll2()
     .then(progress2)
