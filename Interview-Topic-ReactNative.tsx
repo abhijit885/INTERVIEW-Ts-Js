@@ -318,6 +318,7 @@ Flex for layout the element ,use primary and secoendary axis concept default axi
 display:'flex',
 flex : 1 //take the full area     //according to primary access
 flexWrap:"wrape", //help to keep the hole things in to the parent view not to overflow
+flex:"grow"
 overflow:"hidden"
 justifyContent:'flex-start',flex-end,center,space-between,space-around    //work according to primary axis like flexDirection row or column
 alignItem:'center',flex-start,flex-end  // work item alignment according to cross access
