@@ -73,14 +73,6 @@ low - performance loading from cache
 
 // what is safeAreaView : Moreover, and most importantly, Safe Area's paddings reflect the physical limitation of the screen, such as rounded corners or camera notches (i.e. the sensor housing area on iPhone 13).
 
-// Yarn VS Npm?
-/*
-Yarn => Facebook developed Yarn in 2016 as a replacement for NPM. It was designed to offer more advanced features that NPM lacked at the time (such as version locking) and create a more secure, stable, and efficient product.
-However, since Yarn was released, NPM has added several crucial features. In its current state, Yarn is now more of an alternative to NPM rather than a replacement.
-
-NPM => is the default package manager for Node.js with a CLI tool that helps install, manage, and remove Node.js packages. It also enables users to share open-source Node.js packages.
-*/
-
 //TouchableOpacity vs Button vs Pressable
 /*
 Pressable was a new introduction to RN 0.63, prior to that,Touchable Opacity was the most common used Component to wrap a component or simliar components.
@@ -126,6 +118,36 @@ Use WEBP format for images. It can help reduce the binary size on iOS and Androi
 
 //Payment getway?
 /*
+2.React-Native-Razorpay ***
+a.React-Native-Razorpay SDK Versions 2.3.0
+b.Create a Razorpay account.
+c.Generate API Keys in Test Mode
+d.onPress={() => {
+              var options = {
+                description: 'Credits towards consultation',
+                image: 'https://i.imgur.com/3g7nmJC.png',
+                currency: 'INR',
+                key: 'rzp_test_1DP5mmOlF5G5ag', // Your api key
+                amount: '5000',
+                name: 'foo',
+                prefill: {
+                  email: 'void@razorpay.com',
+                  contact: '9191919191',
+                  name: 'Razorpay Software',
+                },
+                theme: {color: '#F37254'},
+              };
+              RazorpayCheckout.open(options)
+                .then(data => {
+                  // handle success
+                  alert(`Success: ${data.razorpay_payment_id}`);
+                })
+                .catch(error => {
+                  // handle failure
+                  alert(`Error: ${error.code} | ${error.description}`);
+                });
+            }}
+
 1.React-Native-Stripe
 The Stripe React Native SDK allows you to build payments into your native Android and iOS apps using React Native. We provide powerful and customisable UI screens and elements that you can use out-of-the-box to collect your users’ payment details.
 <StripeProvider
@@ -136,26 +158,28 @@ The Stripe React Native SDK allows you to build payments into your native Androi
       // Your app code here
     </StripeProvider>
 
-2.React-Native-Razorpay
 
-*/
-
-//3.Chat socket.io and firebase chat?
-/*
-Use an open-socket (Websockets) to get information directly from the server when a new bid arrives.
-In this article I will talk about Websockets and specifically on the Node.js library - Socket.io
-Socket.io is a popular JavaScript library that allows us to create real-time, bi-directional communication between software applications and a Node.js server.
+//3.Chat socket.io?
+a.socket.io-client SDK install in react native project **(backend node version and native vertion must SAME)
+no refresh required real time data arrive 
+b.InitializeSocket with socket_Url
+c.emit() for send the message
+on()
+removeListener()  **remove lissoner
+b.socketService.on() **for Liston all data
+c.socketService.emit("send_message",message)
+    
 */
 
 //Authentication?
 /*
-1.Api Auth
+1.Api Auth use axios() / fetch()
 2.React-native-google-signIn/google-signin
 3.React-native-fb sdk
 4.react-native-apple-authentication
 */
 
-//Thunk for middleware => Redux is a state management tool, which is used to store the state of different variables in our react application. It makes complex react applications easier by centralizing the application state. You can learn more about redux here. Redux supports middleware, and middleware functions run between dispatching an action and the moment it reaches the reducer. Redux middlewares can be used for logging, routing, asynchronous actions, etc.For the scope of this tutorial, we will focus on a redux middleware called thunk. It allows us to return functions instead of objects from redux actions. Plain redux doesn’t allow complex logic inside action functions, you can only perform simple synchronous updates by dispatching actions. This middleware extends its ability and lets you write complex logic that interacts with the store. Thunk doesn’t interfere with the action until it returns a function
+//Thunk for middleware => Redux is a state management tool, which is used to store the state of different variables in our react application. It makes complex react applications easier by centralizing the application state. Redux supports middleware, and middleware functions run between dispatching an action and the moment it reaches the reducer. Redux middlewares can be used for logging, routing, asynchronous actions, etc.For the scope of this tutorial, we will focus on a redux middleware called thunk. It allows us to return functions instead of objects from redux actions. Plain redux doesn’t allow complex logic inside action functions, you can only perform simple synchronous updates by dispatching actions. This middleware extends its ability and lets you write complex logic that interacts with the store. Thunk doesn’t interfere with the action until it returns a function
 
 //Redux-Toolkit
 /*
@@ -317,9 +341,10 @@ flexDirection: 'row' //x axis ,horizontayy
 Flex for layout the element ,use primary and secoendary axis concept default axis is column //y axis ,verticaly,top to bottom
 display:'flex',
 flex : 1 //take the full area     //according to primary access
-flexWrap:"wrape", //help to keep the hole things in to the parent view not to overflow
-flex:"grow"
+flexWrap:"wrape", //help to keep the hole things in to the parent view not to overflow **broken into multiple line
+flex:"grow" => flexGrow describes how any space within a container should be distributed among its children along the main axis. After laying out its children, a container will distribute any remaining space according to the flex grow values specified by its children
 overflow:"hidden"
+alignContent ??
 justifyContent:'flex-start',flex-end,center,space-between,space-around    //work according to primary axis like flexDirection row or column
 alignItem:'center',flex-start,flex-end  // work item alignment according to cross access
 alignSelf:'stretch',center,flex-end for the perticuler element only,it can over right the container alignItem property but alignItem is for the container

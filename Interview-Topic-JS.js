@@ -1023,3 +1023,10 @@ annonymous function
 class component / functional component
 pure component
 
+// Yarn VS Npm?
+/*
+Yarn => Facebook developed Yarn in 2016 as a replacement for NPM. It was designed to offer more advanced features that NPM lacked at the time (such as version locking) and create a more secure, stable, and efficient product.
+However, since Yarn was released, NPM has added several crucial features. In its current state, Yarn is now more of an alternative to NPM rather than a replacement.
+
+NPM => is the default package manager for Node.js with a CLI tool that helps install, manage, and remove Node.js packages. It also enables users to share open-source Node.js packages.
+*/
