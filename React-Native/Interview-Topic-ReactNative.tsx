@@ -82,11 +82,14 @@ HitRect, which is such a cool feature, acc to docs :
 A basic button component that should render nicely on any platform. Supports a minimal level of customization.
 */
 
-//scrollView vs flatList?
+//scrollView vs flatList vs FlashList?
 /*
 ScrollView loads all the content,the data to be displayed on screen all at once.it would automatically cause performance issues
 Flatlist It shows only those elements that are currently being displayed on the screen.
 As opposed to the ScrollView, the FlatList renders only those elements that are currently being displayed on the screen (default: 10 items).
+FlatList is also a react native component that is used to display a list of items. It is similar to ScrollView , but it is more efficient because it uses a more memory-efficient data structure to store the list items and it only renders the items that are currently visible on the screen.
+FlashList => 
+FlashList is Shopify's React Native List library. This library solved a long-standing problem in the React Native community: bad list performance, by introducing high performance rendering, and removing problems like blank spacing and low fps on some devices.
 */
 
 //How roted screen potret to landscrep
@@ -592,4 +595,9 @@ When integrating the context into your application, consider that it adds a good
 
 
 */
-//deepLinking ?
+//deepLinking ? => Deep Linking is a technique in which a given URL or resource is used to open a specific page or screen on mobile. So, instead of just launching the app on mobile, a deep link can lead a user to a specific screen within the app, providing a better user experience. This particular screen may reside under a series of hierarchical pages, hence the term "deep" in deep linking. It is useful for marketing campaigns, app-user retention, etc. As an application user, you probably have experienced deep linking when opening a link, for example, for a product in an e-commerce store from the web browser. If you have the app of that shop installed, it may use a deep link to open the app navigate you directly to that product’s screen.
+handle 2 scenarios:
+
+1.If the app wasn't previously open, the deep link needs to set the initial state
+2.If the app was already open, the deep link needs to update the state to reflect the incoming link
+/*
