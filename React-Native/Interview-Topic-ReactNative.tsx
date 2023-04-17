@@ -343,7 +343,7 @@ display:'flex',
 flex : 1 //take the full area     //according to primary access
 flexWrap:"wrape", //help to keep the hole things in to the parent view not to overflow **broken into multiple line
 flex:"grow" => flexGrow describes how any space within a container should be distributed among its children along the main axis. After laying out its children, a container will distribute any remaining space according to the flex grow values specified by its children
-overflow:"hidden"
+overflow:"hidden" : => If we would use overflow: ‘visible’ on the Parent View component and put multiple children inside the View. Then if all the children components height width is more than parent height and width it will expand itself and does not bound inside the Parent view.
 alignContent ??
 justifyContent:'flex-start',flex-end,center,space-between,space-around    //work according to primary axis like flexDirection row or column
 alignItem:'center',flex-start,flex-end  // work item alignment according to cross access
@@ -354,9 +354,19 @@ position:'absolute', // control how the components are overlap each other and us
 
 //////////////////////--------- Descriptions -----------/////////////////////
 
-//Simple component :is a
+//Simple component : => A component is an independent, reusable bit of code which divides the UI into smaller pieces. For example, if we were building the UI of React website using Reactjs we can break its UI into smaller parts as shown in the figure.
 
+*/
+//PROPS VS STATE
+1.props are immutable(means cann't change the value)  stats can be change
+2.Props get passed to the component State is managed inside the component 
+3.props are like function perameter Stats are like veriable 
+4.
+/*
+/*
 //pass data child component to parent and parent to child
+1.parent to child : => 
+*/
 
 //Lifecycle methods order of execution ?
 /*
@@ -371,7 +381,7 @@ position:'absolute', // control how the components are overlap each other and us
 // Component ?
 // 3 way components are render 1.state changes, 2. props are receive changes, 3.parent is render child component will re - render
 //Control vs unControl component?
-//control component control by the react component bu using onChange and value er get the value and chenge the input tezt value ex: useState, and uncontrol component control by DOM ex: useRef
+//control component control by the react component bu using onChange and value er get the value and chenge the input tezt value ex: useState(), and uncontrol component control by DOM ex: useRef()
 
 //PROPS?
 /*
@@ -533,6 +543,7 @@ remove the duplicat logic from a compoment and extract the logic in custom hook 
         return [count, Increment, Decrement]
     }
     export default useCounter
+
     import React from 'react';
     import useCounter from './useCounter'
     function Counter1() {
@@ -572,5 +583,13 @@ remove the duplicat logic from a compoment and extract the logic in custom hook 
     }
     export default App
 */
+/*
+//useContext : =>The context in React lets you supply child components with global data, no matter how deep they are in the components tree.
 
+Using the context requires 3 steps: creating, providing, and consuming the context.
+
+When integrating the context into your application, consider that it adds a good amount of complexity. Sometimes drilling the props through 2-3 levels in the hierarchy isn't a big problem.
+
+
+*/
 //deepLinking ?
