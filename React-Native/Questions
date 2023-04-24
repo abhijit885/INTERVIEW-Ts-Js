@@ -94,7 +94,7 @@ Loop [for , forIn , forOf , forEach]
 
 **\***REACT QUESTION**\***
 why we use react ? Adventure & Disadvantage 
-Concept of virtual DOM 
+Concept of virtual DOM vs Real DOM
 how rendering works in React ?
 contextAPI
 Question on Optimization (Memo, usememo, useCallback)

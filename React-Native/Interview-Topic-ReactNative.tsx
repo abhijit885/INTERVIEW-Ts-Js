@@ -89,7 +89,7 @@ Flatlist It shows only those elements that are currently being displayed on the 
 As opposed to the ScrollView, the FlatList renders only those elements that are currently being displayed on the screen (default: 10 items).
 FlatList is also a react native component that is used to display a list of items. It is similar to ScrollView , but it is more efficient because it uses a more memory-efficient data structure to store the list items and it only renders the items that are currently visible on the screen.
 FlashList => 
-FlashList is Shopify's React Native List library. This library solved a long-standing problem in the React Native community: bad list performance, by introducing high performance rendering, and removing problems like blank spacing and low fps on some devices.
+FlashList is Shopify's React Native List library. This library solved a long-standing problem in the React Native community: bad list performance, by introducing high performance rendering, and removing problems like blank spacing and low fps on some devices, maximize performance, more memory efficient.
 */
 
 //How roted screen potret to landscrep
