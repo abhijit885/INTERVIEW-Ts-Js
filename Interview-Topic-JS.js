@@ -1021,7 +1021,8 @@ shalow copy / deep copy
 /*
 DOM => It represents the entire UI(User Interface) of the web application as the tree data structure. It is a structural representation of HTML elements of a web application in simple words. Whenever there is any change in the state of the application UI, DOM is updated and represents the change.
 Virtual DOM => object is the same as a real DOM object, except that it is a lightweight copy. This means that it cannot manipulate on-screen elements. Moreover, upon any change of a property, it only updates the corresponding nodes and not the entire tree. That makes it a quick and efficient alternative.
-**Diffing algorithm in virtual DOM => by this react compare the real dom and vertual dom and only update the updated node in jsx.React uses virtual DOM to enhance its performance
+**Diffing algorithm in virtual DOM => by this react compare the real dom and vertual dom and only update the updated node in jsx.React uses virtual DOM to enhance its performance.
+REACT.js actual dom is slow thats why react use the virtual dom whenever change the state and render in component that time react change only the node or state change thats why very first 
 */
 annonymous function
 class component / functional component
