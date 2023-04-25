@@ -1016,8 +1016,10 @@ console.log(entries)
 1.webpack is for bundling
 2.babel
 
+/*
+Object copy => when ever we asign a object in a veriable that time value is not assign in the veriable, reference is assign so it is a issue it not happend in vereable. it can resolved by shalow copy / deep copy. Shalli copy only work in one level of object 1. distructure object 2. Object.assign({},obj). and in deep copy using JSON.parse(JSON.stringify(obj))
+*/
 
-shalow copy / deep copy
 /*
 DOM => It represents the entire UI(User Interface) of the web application as the tree data structure. It is a structural representation of HTML elements of a web application in simple words. Whenever there is any change in the state of the application UI, DOM is updated and represents the change.
 Virtual DOM => object is the same as a real DOM object, except that it is a lightweight copy. This means that it cannot manipulate on-screen elements. Moreover, upon any change of a property, it only updates the corresponding nodes and not the entire tree. That makes it a quick and efficient alternative.
