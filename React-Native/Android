@@ -1,4 +1,4 @@
-Gradle => Gradle is a build automation tool known for its flexibility to build software. A build automation tool is used to automate the creation of applications. The building process includes compiling, linking, and packaging the code. The process becomes more consistent with the help of build automation tools.
+what is Gradle(gradlew is compiler) => Gradle is a build automation tool known for its flexibility to build software. A build automation tool is used to automate the creation of applications. The building process includes compiling, linking, and packaging the code. The process becomes more consistent with the help of build automation tools.
 CompileSdkVersion => tells the Gradle which version it should build the application.
 TargetSdkVersion => defines the specific device which the application is built.
 MinSdkVersion => defines the least version of API level that your application supports.
@@ -6,3 +6,8 @@ NdkVersion =>
 buildToolsVersion => is the version of the compilers (aapt, dx, renderscript compiler, etc...) that you want to use. For each API level (starting with 18), there is a matching . 0.0 version.
 
 https://dev.to/srajesh636/how-we-reduced-our-production-apk-size-by-70-in-react-native-1lci
+
+3 states are in a app
+1.forground
+2.background
+3.kill
