@@ -5,6 +5,18 @@
 
 // @react-navigation/native : V5 ,V6
 
+// React-Native-Architecture 
+1.in between JS Bundle and Native UI BRIDGE is present who serialize and deserialize the js code in JSON then it works thats why previously slow byt now JSI(javaScrept InterdaceWriten in c++) replece with it and there is no serialize and deserialize concept thats why apps are fast and suport more FPS
+2.FABRIC => here new approch to render UI element priotorize the task like button ,scroll 
+3.TURBO => no need to invok everything kike low level API'S wifi,bluetooth,gps,camera acording to need use those soo. apps are now firster . because of JSI we can invok them any time with get element by id reference 
+//threads om react native
+/*
+
+1.js threads :(1st) compile all code and execute 
+2.shadow threads :(2nd) send the view, and it calculate the height & width 
+3.Main threads :(3rd) render the view 
+*/
+
 // Netive app vs Hybrid app
 /*1.Native app : platform spacifec java,kotlin,objective C
   2.Hybred app : reactNative ,Flutter its open in native browser in android and ios device */
@@ -110,12 +122,7 @@ Use PNG format instead of JPG
 Use WEBP format for images. It can help reduce the binary size on iOS and Android by 29%
 */
 
-//threads om react native
-/*
-1.Main threads :(3rd) render the view 
-2.shadow threads :(2nd) send the view, and it calculet the height with 
-3.js threads :(1st) compile all code and execute 
-*/
+
 
 //Dark Theeme?
 
@@ -355,7 +362,7 @@ z-index : 1  // low value to kep it into the top or bottom   according to z axis
 position:'absolute', // control how the components are overlap each other and use left right top bottom
 */
 
-//////////////////////--------- Descriptions -----------/////////////////////
+//////////////////////--------- Core Topic -----------/////////////////////
 
 //Simple component : => A component is an independent, reusable bit of code which divides the UI into smaller pieces. For example, if we were building the UI of React website using Reactjs we can break its UI into smaller parts as shown in the figure.
 
