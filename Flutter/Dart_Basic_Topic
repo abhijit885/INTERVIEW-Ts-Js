@@ -1,0 +1,66 @@
+Why Flutter?
+1.Object Oriented
+2.A Fast Compiler
+3.AOT(ahead-at-time) & JIT(Just-in-time)
+
+**DataType**
+1.Number(intejer
+int age = 20;
+,double
+double a = 20.6)
+2.string
+string name = "Abhijit"
+3.boolian
+bool active = true
+4.List
+List myList = [2,8,3,7] //Like array same type first will 0 index
+5.set
+Set mySet ={"qaa","gd","yh","bvf",} //set is like object
+6.map //set is like object or JSON object with key value pare dynamic is for any type can use
+map<String,dynamic> myMap ={
+'name' : 'abhijit',
+'age' : 43
+};
+
+var b= "saha" //var is for when you not declare the data type
+// top level function(from where code execution starts)
+
+void main(){
+
+}
+
+**Operators**
+Arithmetic
+equality
+type test (is , is!)
+bitwise
+assignment
+logical
+conditional (? : , ?? //null checker)
+
+**Conditional statement**
+if else if,else
+
+**loops**
+for
+for in
+for-each
+while
+do-while
+
+**List/Array**
+
+Growable List
+
+**Map**
+map
+
+**Enum**
+Enumeration - Enum
+
+**Function**
+define a function
+calling a function
+parameterized a function
+arrow a function //default return
+returning a function
