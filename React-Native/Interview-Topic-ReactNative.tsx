@@ -1,6 +1,6 @@
 //////////////////////--------- Basic Questions -----------/////////////////////
 // latest version of react-native : 0.71 ,stable version : 68.5 , 65
-
+//macOs version catalina 10.15.7 (catalina > Monterey)
 // Xcode version : 12.4
 
 // @react-navigation/native : V5 ,V6
