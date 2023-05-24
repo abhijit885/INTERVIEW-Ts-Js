@@ -2,18 +2,22 @@ Why Flutter?
 1.Object Oriented
 2.A Fast Compiler
 3.AOT(ahead-at-time) & JIT(Just-in-time)
+4.strongly typed language 
+5.null sefty 
+6.hot relode 
+7.hot restart
 
-**DataType**
-1.Number(intejer
+**DataType**  
+1.Number(integer
 int age = 20;
 ,double
 double a = 20.6)
 2.string
 string name = "Abhijit"
-3.boolian
+3.boolean
 bool active = true
 4.List
-List myList = [2,8,3,7] //Like array same type first will 0 index
+List myList = [2,8,3,7] //Like array same type first will 0 index collection of values
 5.set
 Set mySet ={"qaa","gd","yh","bvf",} //set is like object
 6.map //set is like object or JSON object with key value pare dynamic is for any type can use
@@ -22,6 +26,7 @@ map<String,dynamic> myMap ={
 'age' : 43
 };
 
+**dart os statically type language
 var b= "saha" //var is for when you not declare the data type
 // top level function(from where code execution starts)
 
@@ -31,7 +36,7 @@ void main(){
 
 **Operators**
 Arithmetic
-equality
+equality  
 type test (is , is!)
 bitwise
 assignment

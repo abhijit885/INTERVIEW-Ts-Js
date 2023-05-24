@@ -19,6 +19,7 @@ git checkout "branch name" -> move between branches
 git branch "branch name" -> create new branch
 git checkout -b "branch name" -> create new branch and seit to it
 git mearge "branch name" -> marge 2 branches
+git remote -v //for check URL of remort repo
 
 Here the sequence to follow when using git stash:
 1.Save changes to branch A.
@@ -35,3 +36,4 @@ also move the changes one branch to another branch by git stash and git stash po
 4.git branch -M master master
 5.git remote add origin "https//:www."
 6.git push -u origin master
+//Inofied

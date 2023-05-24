@@ -1,0 +1,11 @@
+flutter is a UI toolkit (light wait)
+react is a librery (no spacifec boundation)
+anguler is a freamwork (bundetion in use spacifec things)
+single code base
+CLI(is very helpfull commend kine interface)
+devtool is very powerful
+**FLUTER ARCHITECTURE**
+3layer
+1.EMBEDDER(is responsable for run the application on system)
+2.ENGINE(is written in C++ in/op ,network request,rendering pixels on screen )
+3.FRAMEWORK(it is very small most all the devloper work on it with metireal,widgets,Animations,Gastures )
