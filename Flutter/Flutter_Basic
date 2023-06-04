@@ -9,3 +9,18 @@ devtool is very powerful
 1.EMBEDDER(is responsable for run the application on system)
 2.ENGINE(is written in C++ in/op ,network request,rendering pixels on screen )
 3.FRAMEWORK(it is very small most all the devloper work on it with metireal,widgets,Animations,Gastures )
+
+**Flutter Widgets**
+
+**Responsive Design**
+**Navigation**
+**Material design VS Cupatino Design**
+**Animation**
+implecit and explecit animation
+**User input and form Validation**
+**Theame Font Assets local Database payment getway Map LowLevel API(camera,battery acccess)**
+**State Management(Provider,RiverPod,getX,Block,Cubic)Approach**
+**API integration,HTTP request handling**
+**thread, multithread,stream,compute **
+
+---

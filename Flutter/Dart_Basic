@@ -60,7 +60,7 @@ Growable List
 **Map**
 map
 
-**Enum**
+**Enum**<custom datatype>
 Enumeration - Enum
 
 **Function**
@@ -69,3 +69,18 @@ calling a function
 parameterized a function
 arrow a function //default return
 returning a function
+optional positional parameter
+optional link parameter
+hire order function
+functional programming
+
+Object Oriented programming
+Class
+Ingeritance
+Polymorphism
+Abstraction
+Encapsulation
+Interface
+
+Asynchronous programming
+Exception Handling
