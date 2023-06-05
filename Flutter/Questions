@@ -2,7 +2,28 @@
 2.scaffold
 3.velocity X  
 4.StateFullWidget & StateLessWidget  
+5.Material design(android) & cupetino design(ios)
 flutter MVVM architecture
 child vs children in widget design  
 getX controllers with obs
-    
+
+final VS Const
+final => final variable are not allocated memory at the time of declare or compile time
+value change never possible but in normal value possible value change never possible int age = 50; int age = 50;//wrong
+final int age = 50; 
+ age = 50;//wrong
+print(age); 
+const =>
+value change never possible 
+final const age = 50;
+final const age = 50;//wrong
+print(age); 
+instance(in a class) variable are final but they are not be const . if wants to use const that time have to use static
+
+in final re asign is possable but in const re asign is not possanle
+void main() {
+    int a =80;
+    int b = 50;
+    final c = a;//possable 
+    final d = b;//not possable
+}

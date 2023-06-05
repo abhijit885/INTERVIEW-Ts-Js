@@ -4,6 +4,7 @@ anguler is a freamwork (bundetion in use spacifec things)
 single code base
 CLI(is very helpfull commend kine interface)
 devtool is very powerful
+Pub.dev for all packages
 **FLUTER ARCHITECTURE**
 3layer
 1.EMBEDDER(is responsable for run the application on system)
@@ -11,7 +12,30 @@ devtool is very powerful
 3.FRAMEWORK(it is very small most all the devloper work on it with metireal,widgets,Animations,Gastures )
 
 **Flutter Widgets**
+1.Text
+2.container
+3.row
+4.Column
+5.Stack
+6.Textfields
+7.Hero
+8.Scaffold
+9.Appbar
+10.Buttons
 
+**Advance**
+List
+collections
+Itarebles
+Lambdas
+functional programing
+async/awate
+Future
+streams
+
+**Shared preferences(android),UserDefaults(IOS),Local storage**
+**SQL Light,Firebase**
+**JSON,JSON Parsing, Serialize & Deserialize**
 **Responsive Design**
 **Navigation**
 **Material design VS Cupatino Design**
@@ -19,8 +43,12 @@ devtool is very powerful
 implecit and explecit animation
 **User input and form Validation**
 **Theame Font Assets local Database payment getway Map LowLevel API(camera,battery acccess)**
-**State Management(Provider,RiverPod,getX,Block,Cubic)Approach**
+**State Management(Provider,RiverPod,getX,Bloc,Cubic)Approach**
+**Devtools**
+**RxDart**
 **API integration,HTTP request handling**
-**thread, multithread,stream,compute **
+** thread, multithread, stream , compute async , Isolate , eventLoop , Reusable Weget **
+**unit test ,integration test,weget test**
+**how to deploy in playstore,apple store,deploy flutter web app production release**
 
 ---
