@@ -1,146 +1,233 @@
-Why Flutter?
-1.Object Oriented
+Why Flutter ?
+    1.Object Oriented
 2.A Fast Compiler
-3.AOT(ahead-at-time) & JIT(Just-in-time)
+3.AOT(ahead - at - time) & JIT(Just -in -time)
 4.strongly typed language
 5.null sefty
 6.hot relode
 7.hot restart
 
-**DataType**  
-1.Number(integer
+    ** DataType **
+    1.Number(integer
 int age = 20;
-,double
+, double
 double a = 20.6)
 2.string
 string name = "Abhijit"
 3.boolean
 bool active = true
 4.List
-List myList = [2,8,3,7] //Like array same type first will 0 index collection of values
+List myList = [2, 8, 3, 7] //Like array same type first will 0 index collection of values
+    .length
+    .add()
+    .addAll()
+    .insert(0, "ss")
+    .replaceRange(start, end, values)
+
 5.set
-Set mySet ={"qaa","gd","yh","bvf",} //set is like object
+Set mySet = { "qaa", "gd", "yh", "bvf", } //set is like object
 6.map //set is like object or JSON object with key value pare dynamic is for any type can use
-map<String,dynamic> myMap ={
-'name' : 'abhijit',
-'age' : 43
+map < String, dynamic > myMap ={
+    'name' : 'abhijit',
+        'age' : 43
 };
 //dymanic means value of the key is not spacified like it may be string,bool,int
 7.Rune => charcodes value convert in imoges
 
 var is use there when we don't specify the datatype of a value
-\*\*dart os statically type language
-var b= "saha" //var is for when you not declare the data type
+\*\* dart os statically type language
+var b = "saha" //var is for when you not declare the data type
 // top level function(from where code execution starts)
 
 void main(){
 
 }
 
-**Operators**
-Arithmetic
-equality  
-type test operator (is (return true or false) , is!(return false or true))
+** Operators **
+    Arithmetic
+equality
+type test operator (is(return true or false) , is!(return false or true))
 bitwise
 assignment
 logical
-conditional (? : , ?? (null checker))
+conditional(? : , ?? (null checker))
 
-**Conditional statement**
+** Conditional statement **
 if else if,else ,switch
 
-**loops**
+** loops **
 for
 for in
 for-each
 while
-do-while
+do -while
 
-**List/Array**
+** List / Array **
 
-Growable List
+                    Growable List
 
-**Map**
-map
+                        ** Map **
+                        map
 
-**Enum**<custom datatype>
-Enumeration - Enum
+                        ** Enum ** <custom datatype>
+                            Enumeration - Enum
+                            void main(){
+                                final gender = Gender.>Male
+                            switch () {
+        case Gender.mail:
+                            print("gender is male")
+    }
+}
+                            enum Gender {Male, Female, Unknown}
 
-**Runtime error vs Compiletime Error**
-cyntex error is Compiletime Error
-after compilation and run error is Runtime error
+                            **Runtime error vs Compiletime Error**
+                            cyntex error is Compiletime Error
+                            after compilation and run error is Runtime error
 
-**Function**
-define a function
-calling a function
-parameterized a function
-arrow a function //default return
-returning a function
-optional positional parameter
-optional link parameter
-hire order function
-functional programming
+                            **Function**
+                            define a function
+                            demo() {
+                            };
+                            calling a function
+                            demo();
+                            parameterized a function
+                            add(a,b){
+                                c = a + b;
+                            return c;
+};
+                            add(2,6);
+                            arrow a function //default return
+arrowFunc() => { };
+                            arrowFunc();
+                            return from a function
+                            example(){
+    return 10*20
+}
+                            optional positional parameter
+                            add(a,b,[m,n]){ //[] in this are optional
+                                c = a + b;
+                            return c;
+};
+                            add(2,6);
+                            optional named parameter
+                            add(a,b,{m, n}){ //{} in this are named 
+                                c = a + b;
+                            return c;
+};
+                            add(2,6,m:40);
+                            optional link parameter
+hire order function =>a function return another function or take a function as a perameter to another function.
+                            **perameter to another function
+                            void main(){
+                                addTwoNum(){
+                                print(10 * 20);
+                            mainFunction(addTwoNum);
+}
+}
+                            mainFunction(Function function){
+                                function ()
+}
+                            **a function return another function
+                            void main(){
+                                mainFunction()();
+};
+                            mainFunction(){
+return () => {
+                                print("return a function")
+                            };
+};
+                            functional programming
 
-**Object Oriented programming**
+                            **Object Oriented programming**
 Class => blueprint of schema of a object
 Object => instance of class
 constructor => same name of class
 static => in a class you can make a vareable or function static so no need to make object to access those vereable or function  
 Ingeritance =>
-void main(){
+                            void main(){
 var son = Son();
-print(son.age);
-print(son.name);
-sone.methodOne();
+                            print(son.age);
+                            print(son.name);
+                            sone.methodOne();
 }
-class Father{
-int age =50;
-methodOne(){
-print("abhijit");
+                            class Father{
+                                int age =50;
+                            methodOne(){
+                                print("abhijit");
 }
-int age =500;
-methodTwo(){
-print("saha");
+                            int age =500;
+                            methodTwo(){
+                                print("saha");
 }
 }
-class Son extend Father {
-int name = "wqwqw";
+                            class Son extend Father {
+                                int name = "wqwqw";
 }
 Polymorphism => method overloading and method over riding
 method overriding => change any function or value in perent class from child class
-void main(){
+                            void main(){
 var son = Son();
-print(son.age);
-print(son.name);
-sone.methodOne();
+                            print(son.age);
+                            print(son.name);
+                            sone.methodOne();
 }
-class Father{
-int age =50;
-methodOne(){
-print("abhijit");
+                            class Father{
+                                int age =50;
+                            methodOne(){
+                                print("abhijit");
 }
-int age =500;
-methodTwo(){
-print("saha");
-}
-}
-class Son extend Father {
-int name = "wqwqw";
-@override
-methodOne(){
-print("method overriding");
+                            int age =500;
+                            methodTwo(){
+                                print("saha");
 }
 }
-Abstraction
-Encapsulation
-Interface
+                            class Son extend Father {
+                                int name = "wqwqw";
+                            @override
+                            methodOne(){
+                                print("method overriding");
+}
+}
+Abstraction => can't create instance ,object of that class but if that abstract class us extend with another class that can access those methods
+Encapsulation => restrection the value and methods privet and public , in came page privet is not work must in diffrent pages
 
-Asynchronous programming
-Exception Handling
+                            class Example {
+                                int ? _age //privet variable start with _
+    set setAge(int a){ // using set keyword set value privet 
+                                _age = a;
+    };
+                            get getAge{ // using get keyword get  privet value
+        return _age;
+    };
+};
+Interface => also like blue preant ,use keyword implements,also @override methods which are in parent class
+                            in extends(Inheritance) @override methods which are in parent class not requred,
+                            extends keyword use in Inheritance and implements keyword use in interface
+                            multiple Inheritance not possable but multiple interface is possable
+                            class A {
+                                int age =50;
+                            methodOne(){
+                                print("abhijit");
+}
+                            int age =500;
+                            methodTwo(){
+                                print("saha");
+}
+}
+                            class B implements A{
+                                @override methodOne(){
+                            }
+                            @override methodTwo(){
+                            }
+}
 
-**Youtube**
-Afran Sarkar
-Baaba Devs
-Codepur
-Ahirlog
-Rabbil Hasan
+                            Asynchronous programming
+                            Exception Handling
+
+                            **Youtube**
+                            Afran Sarkar
+                            Baaba Devs
+                            codeX
+                            Codepur
+                            Ahirlog
+                            Rabbil Hasan
