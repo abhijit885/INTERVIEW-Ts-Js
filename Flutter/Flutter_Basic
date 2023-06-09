@@ -43,7 +43,33 @@ streams
 implecit and explecit animation
 **User input and form Validation**
 **Theame Font Assets local Database payment getway Map LowLevel API(camera,battery acccess)**
-**State Management(Provider,RiverPod,getX,Bloc,Cubic)Approach**
+**State Management(Provider,RiverPod,getX,Bloc,Cubic)Approach** simplify all this things
+**Provider**
+
+**Bloc**
+**GetX**follow MVC pattern model,view,controller
+1.state management =>>
+class Controller extends GetxController{
+var count = 0.obs
+increment() => count++;
+};
+<= how lesson this data =>
+1.GetBuilder(very first ,takes less memory,update the property manualy)  
+2.GetX(reactive approach,continue lesson data)
+3.Obx(very first)
+
+2.rout management
+Get.to(CartPage());
+3.dependency management => use a class functionality to other class just use get will hold the instance in memory.
+final cartController = Get.put(CartController());
+
+4.internationalization
+translate class will help with any language
+5.validation,storage,theme,snackbar,dialog
+
+**RiverPod**
+**Cubic**
+
 **Devtools**
 **RxDart**
 **API integration,HTTP request handling**

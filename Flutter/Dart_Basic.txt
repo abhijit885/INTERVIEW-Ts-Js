@@ -3,7 +3,19 @@ Why Flutter ?
 2.A Fast Compiler
 3.AOT(ahead - at - time) & JIT(Just -in -time)
 4.strongly typed language
-5.null sefty
+5.null sefty => (?,!,late)
+if any value is not assign in veriable that time it will be null to avoid null value use null sefty .un necesory app not crashed 
+if prelimenary value is NULL that time use '?'. 
+if in a veriable is 100% value exist that time use '!'.
+void main() {
+    String?name;  //null check operator used in null value
+    string name; 
+    convertString(name!);
+}
+convertString(value){
+    print(int.parse(value));
+}
+let => works like initialy null but va assign in after some time
 6.hot relode
 7.hot restart
 
@@ -56,12 +68,42 @@ conditional(? : , ?? (null checker))
 if else if,else ,switch
 
 ** loops **
-for
+for =>
+for(var i=0;i<10;i++){
+    if(i == 5){
+        continue;//output => 012346789
+    }
+    if (i == 5) {
+        break; //output =>01234
+    }
+    print(i)
+}
 for in
+List myList = ["1","2","3","4","5"];
+for (var element in myList){
+    print(myList);
+};
 for-each
+var myList2 = [
+    {"name":"abhijit"},
+    {"name":"abhijit"},
+    {"name":"abhijit"},
+];
+myList2.forEach((element) {
+    print(element['name']);
+});
 while
-do -while
-
+int i = 1;
+int val = 5
+while (i<=5){
+    print(i);
+    i++;
+}
+do while
+do{
+    print(i);
+    i++;
+} while (i<=value);
 ** List / Array **
 
                     Growable List

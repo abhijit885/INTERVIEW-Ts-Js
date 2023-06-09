@@ -27,3 +27,5 @@ void main() {
     final c = a;//possable 
     final d = b;//not possable
 }
+while vs do while
+in while fist condition then body in do while first body then condition
