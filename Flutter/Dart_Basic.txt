@@ -263,9 +263,46 @@ Interface => also like blue preant ,use keyword implements,also @override method
                             }
 }
 
-                            Asynchronous programming
-                            Exception Handling
+                            Asynchronous programming => 
+                            print("Line 1");
+                            print("Line 2");
+                            Future fetchData() {  //Future denote that is asyncronus process and it has 2 state 1.completed 2.uncompleted 
+                                Future.delayed(Duration(second:3), () => print("line 3"))
+                            }
+                            print("Line 4");
+                            print("Line 5");
+                            print("Line 6");
+                            Exception Handling=>(try,on,catch,stack-trace,finally)
+                            Try Catch =>
+                            try{
+                                int result = int.parse("44q");
+                                print(result.RuntimeType);
+                            }catch(e){
+                                print(e)
+                            }
+                             stack-trace => which librery are braked in try catch block can see those
+                             on => use when we know the exception and will handel the exceptopn name with any allert
+                            catch is not work when on exception working
+                            finnaly => is allaws execute the block if error occers or not
+                            custom exception => 
+                            class value implements Exception {
+                                String lessThanFive() {
+                                    return "value can not be less than five";
+                                };
+                            class value implements Exception {
+                                String lessThanTen() {
+                                    return "value can not be less than ten";
+                                };
+                            };
 
+                            value(int v){
+                                if(v < 5){
+                                    throw Value().lessThanFive();
+                                    
+                                }else{
+                                    throw Value().lessThanTen();
+                                };
+                            };
                             **Youtube**
                             Afran Sarkar
                             Baaba Devs

@@ -47,21 +47,51 @@ implecit and explecit animation
 **Provider**
 
 **Bloc**
-**GetX**follow MVC pattern model,view,controller
+**GetX**follow MVC pattern model(skema),view,controller(have all the state)
 1.state management =>>
 class Controller extends GetxController{
 var count = 0.obs
 increment() => count++;
 };
 <= how lesson this data =>
-1.GetBuilder(very first ,takes less memory,update the property manualy)  
-2.GetX(reactive approach,continue lesson data)
-3.Obx(very first)
-
+1.GetBuilder(very first ,takes less memory,update the property manualy,wrape with getX widget.in ui to update the UI,no stream is there)  
+*normal types
+*setState()
+*manual call update(); method
+*light
+example
+var testAmount =0.0;(normal variable)
+getBuilder<CartController>(
+initState:
+builder:(controller){
+return Text(controller.testAmount);
+};
+)
+2.GetX(reactive approach,continue lesson data,wrape with getX widget.in ui to update the UI,return a controller)
+_.obs(use obserbeable variable)
+_.use streams in backend
+_.auto update
+_.weight normal
+Example
+var cartItems = List<Product>().obs;(use obserbeable variable)
+getX<CartController>(
+initState:
+builder:(controller){
+return Text(controller.cartItems);
+};
+)
+3.Obx(very first,no builder,no controller,no init state,not return any controller)
+Obx((){
+return Text(CartController.cartItems);
+};
+)
+GetX VS Obx
+if have the instance of controller,access to controller in same class that time use GetX ,if not availebel use Obx
 2.rout management
 Get.to(CartPage());
-3.dependency management => use a class functionality to other class just use get will hold the instance in memory.
+3.dependency(ingection) management => use a class functionality to other class just use get will hold the instance in memory.hold the instance of controller.
 final cartController = Get.put(CartController());
+to get the data in other page use => get.find();
 
 4.internationalization
 translate class will help with any language
