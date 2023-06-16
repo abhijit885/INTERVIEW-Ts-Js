@@ -113,6 +113,7 @@ On iOS, in the General tab and Deployment Info section of Xcode enable the Devic
 1.react-native-share-element for transitions using react navigation inrernally and share element will use in all stack screens
 2.react-native-Animatable, it is used in all image, view, text by animatable.its propertys are animation = { 'slideInUp'}, duration, delay, direction, easing
 3.react-navigation-shared-element - changes in stack-navigation
+4.react-native-reAnimated
 */
 //High resolution image optimize
 /*
