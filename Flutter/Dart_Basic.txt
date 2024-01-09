@@ -3,7 +3,7 @@ Why Flutter ?
 2.A Fast Compiler
 3.AOT(ahead - at - time) & JIT(Just -in -time)
 4.strongly typed language
-5.null sefty => (?,!,late)
+5.null safety => (?,!,late)
 if any value is not assign in veriable that time it will be null to avoid null value use null sefty .un necesory app not crashed 
 if prelimenary value is NULL that time use '?'. 
 if in a veriable is 100% value exist that time use '!'.
