@@ -1,0 +1,19 @@
+1.var,let,const
+2.hosting of veriables
+3.arrow function
+4.higher order function
+5.array distructuring
+6.object distructuring
+7.rest operator
+8.spread operator
+9.if eles
+10.ternary operator
+11.&& , || operator
+12.optional chaining
+13.map(), filter(), reduce(), sort() 
+14.setTimeout() and setIntervel()
+15.callback, callback hill 
+16.Promise()
+17.async, await
+18.try , catch (error handel)
+

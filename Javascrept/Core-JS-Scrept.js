@@ -1,16 +1,4 @@
-// var number = 42
-// console.log(number++) //42
-// console.log(number)   //43
-// console.log(++number)   //44
-// console.log(number)       //44
-// console.log(number--) //42
-// console.log(number) //41
-// console.log(--number) //41
-// console.log(number) //41
-// var num = (++number) + (number++) //43 + 43 = 86
-// var num = (number++) + (++number) //42 + 44 = 86
-// var num = (--number) + (number--) //41 + 41 = 82
-// var num = (number--) + (--number) //42 + 40 = 82
+
 
 Scope
 // let a = 10//global scope

@@ -1,9 +1,24 @@
-//////////////////////--------- Level 1-----------/////////////////////
-// var VS let VS const
+/* increment */
+var number = 42
+console.log(number++) //42
+console.log(number)   //43
+console.log(++number)   //44
+console.log(number)       //44
+console.log(number--) //42
+console.log(number) //41
+console.log(--number) //41
+console.log(number) //41
+var num = (++number) + (number++) //43 + 43 = 86
+var num = (number++) + (++number) //42 + 44 = 86
+var num = (--number) + (number--) //41 + 41 = 82
+var num = (number--) + (--number) //42 + 40 = 82
+
+ /* var VS let VS const */
 //var : function scope , hoisting possible ,global scope, can re assigned 
 //let : block scope
 //const : block scope + value never change
-//Scope 
+
+/* Scope */ 
 var a = 6
 console.log(a) //ok
 {
@@ -38,6 +53,7 @@ function test2() {
         console.log(b) //Illigal shadowing
     }
 }
+
 //declaration let and const not be declear in same scopr var can 
 var a//ok 
 var a//ok
@@ -49,6 +65,7 @@ var a
 {
     const a = 2 //shadowing
 }
+
 //declaration with out initialization
 var a//ok
 let b//error
@@ -62,13 +79,14 @@ const a = 3
 a = 4         //error
 let a = 3
 a = 6        //ok
-//hosting => declear all vereable top of the code at creation phase
 
+/*hosting */ // => declear all vereable top of the code at creation phase
 console.log(aa, BB)
 const aa = 10
 let BB = 10 //hested in temoiral ded zone (we get it in scrept section in inspect => console =>sources =>add breakpoint and run ) output undefind
 console.log(aa)
 var aa = 10 //hested output undefind 
+
 //JS execution context have 2 things(creation phase, execution phase)
 
 // temporal dead zone ??
@@ -80,7 +98,8 @@ function name() {
     let BB = 30
     var CC = 40
 }
-// null vs nan vs undefined 
+
+/* null vs nan vs undefined */ 
 //NaN : is not a number,type is number,
 function sample(num1, num2) {
     return num1 + num2
@@ -90,9 +109,9 @@ sample("aaa", 2)  //output : NaN
 //null : value is set in variable but it is empty,type is object : var a = null //ok
 //void is nothing there completely absent but undefine is not define but it is a value
 
-// HOC (Higher order Component) a component takes a component as props and return a component
-import './App.css';
-import React, { useRef, useState } from 'react'
+/* HOC */ //(Higher order Component) a component takes a component as props and return a component
+import React, { useState } from 'react'
+import './App.css'
 function App() {
     return (
         <div className="App">
@@ -121,7 +140,7 @@ function Counter() {
 }
 export default App;
 
-//Curring
+/* Curring */
 const sum = (x) => {
     return (y) => {
         return (z) => {
@@ -134,7 +153,7 @@ const sum2 = sum(3)
 const sum3 = sum(4)
 console.log(sum3)
 
-// higher order function(HOF) ??
+/* higher order function(HOF) */
 //higher order function (Higher Orders Functions are functions that perform operations on other functions.)example MAP() FILTER() REDUCE(). A Higher-Order function is a function that receives a function as an argument or returns the function as output.
 //For example, Array.prototype.map, Array.prototype.filter and Array.prototype.reduce are some of the Higher-Order functions built into the language.
 const ex = function x() {
@@ -156,6 +175,7 @@ const arr2 = arr1.map(function (item) {
     return item * 2;
 });
 console.log(arr2);
+
 //Without Higher-order function
 const persons = [
     { name: 'Peter', age: 16 },
@@ -171,6 +191,7 @@ for (let i = 0; i < persons.length; i++) {
     }
 }
 console.log(fullAge);
+
 //With Higher-order function filter
 const persons = [
     { name: 'Peter', age: 16 },
@@ -182,8 +203,8 @@ const persons = [
 const fullAge = persons.filter(person => person.age >= 18);
 console.log(fullAge);
 
-// datatypes ??
-1. String
+/* datatypes */
+1. String 
 2. Number
 3. Bigint
 4. Boolean
@@ -191,6 +212,8 @@ console.log(fullAge);
 6. Null
 7. Symbol
 8. Object
+
+/* Function */
 // function declaration ??Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon).
 function functionName(parameters) {
     // code to be executed
@@ -202,7 +225,7 @@ function myFunction(a, b) {
 const x = function (a, b) { return a * b };
 let z = x(4, 3);
 
-// IIFF ?? 
+/* IIFF */ 
 //An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. 
 (function () {
     // …
@@ -220,7 +243,9 @@ const ex1 = function x() {
 }
     (function y() { ex1() })
 
-// first class function ??  ( Pass a function as an Argument) treated like variable,when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+/* first class function */ 
+//( Pass a function as an Argument) treated like variable,when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
 const foo = () => {
     console.log("foobar");
 };
@@ -242,7 +267,8 @@ function sayHello() {
     };
 }
 
-// call back function ? => pass a function as a parameter to another function
+/* call back function */
+ // pass a function as a parameter to another function
 const paymentSuccess = true
 const marks = 90
 const enroll = (callback) => {
@@ -307,7 +333,8 @@ setTimeout(function () {
 }, 2000);
 console.log("line 3")
 
-// promise ??
+
+/* promise */
 const paymentSuccess2 = true
 const marks2 = 90
 const enroll2 = () => {
@@ -355,7 +382,7 @@ enroll2()
         console.log(err)
     })
 
-// async Await ??
+/* async Await */
 //1.no need to return promise by default async return a promise 
 //await is to hold the execution of code(waiting for promise) in js engine after getting the promise execution again started
 const paymentSuccess3 = true
@@ -407,18 +434,19 @@ const head = async () => {
 }
 head();
 
-// annonomas function ???
+
+/* annonomas function */
 //all build in array and string function return type => MAP() FILTER() REDUCE() sort() 
 //split()
 //slice() Splice() IndexOf() trim() ??
 
-// JS single threaded but how perform call back function
+/* JS single threaded but how perform call back function */
 
 // dependency vs Dev dependency
 // -normal dependency is for project function purpous ,if use -dev in here will increse js bundle size  
 // -dev mins package is using for development purpous
 
-// Pass Function as parameter
+/* Pass Function as parameter */
 //EX1
 function name() {
     return "hello"
