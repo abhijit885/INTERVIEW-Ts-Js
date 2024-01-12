@@ -496,7 +496,7 @@ for (let i = 0; i < 5; i++) {   //output 0,1,2,3,4
 // lexical scope ??
 //currying  ??
 
-// scope chain ??
+/* scope chain */
 var e = 10
 function sum(a) {
     return function (b) {
@@ -509,9 +509,9 @@ function sum(a) {
 }
 console.log(sum(1)(2)(3)(4)) // output -- 20
 
-// hosting ??
+/* hosting */
 
-// shadowing ??
+/* shadowing */
 function test() {
     let a = "hello"
     if (true) {
@@ -522,7 +522,7 @@ function test() {
 }
 test()
 
-// closer ??
+/* closer */
 function subscribe() {
     var name = "Abhijit" //global scope
     //inner scope
@@ -537,10 +537,10 @@ function subscribe() {
 }
 subscribe()
 
-// illegal Shadowing ??
+/* illegal Shadowing */
 
 
-// Polyfill for map() FILTER() REDUCE() ??
+/* Polyfill for map() FILTER() REDUCE() */
 //Polyfill for map()
 arr.prototype.myMap = function (cb) {
     let temp = [];
@@ -566,7 +566,8 @@ arr.prototype.myReduce = function (cb, initialValue) {
     return accumulator;
 };
 
-//Generator Function ??The function* declaration (function keyword followed by an asterisk) defines a generator function, which returns a Generator object.but whenever it needs to generate a value, it does so with the yield keyword rather than return. 
+/*Generator Function */
+//The function* declaration (function keyword followed by an asterisk) defines a generator function, which returns a Generator object.but whenever it needs to generate a value, it does so with the yield keyword rather than return. 
 function* generator(i) {
     yield i;
     yield i + 10;
@@ -581,7 +582,7 @@ console.log(gen.next().value);
 // Expected output: 20
 //////////////////////---------Difrence-----------/////////////////////
 
-// map() vs forEach()
+/* map() vs forEach() */
 //map() : if you use map then map can return new array by iterating main array 
 //forEach() : this can not return anything ,forEach only iterating main array 
 // map return a new array , map have chaining like map().filter() , forEach() no chaining it modified the original array
@@ -596,7 +597,7 @@ const result22 = numbers.forEach((item) => {
 })
 console.log(multiplyThree, exForEach, arr)
 
-// for vs forEach
+/* for vs forEach */
 //for just loop through the array item initialized from any index is flexible, forEach() have a callback function,methods perform operate on every array item.for each is more faster then for 
 var arr = [3, 5, 2, 7, 45, 7]
 for (let i = 0; i < arr.length; i++) {
@@ -618,6 +619,8 @@ arr.forEach((val) => {
 //make calculator 
 //fibonacci series 
 //Second Largest Element in Array 
+//second Lowest number in array
+
 
 //----------- ES6 -----------
 
