@@ -1,17 +1,4 @@
-/* increment */
-var number = 42
-console.log(number++) //42
-console.log(number)   //43
-console.log(++number)   //44
-console.log(number)       //44
-console.log(number--) //42
-console.log(number) //41
-console.log(--number) //41
-console.log(number) //41
-var num = (++number) + (number++) //43 + 43 = 86
-var num = (number++) + (++number) //42 + 44 = 86
-var num = (--number) + (number--) //41 + 41 = 82
-var num = (number--) + (--number) //42 + 40 = 82
+
 
  /* var VS let VS const */
 //var : function scope , hoisting possible ,global scope, can re assigned 
@@ -687,6 +674,21 @@ console.log("aqq", output)
 
 ///////////////////-------CODE SNEPETS Questions--------////////////////
 
+/* increment */
+var number = 42
+console.log(number++) //42
+console.log(number)   //43
+console.log(++number)   //44
+console.log(number)       //44
+console.log(number--) //44
+console.log(number) //43
+console.log(--number) //42
+console.log(number) //42
+var num = (++number) + (number++) //43 + 43 = 86
+var num = (number++) + (++number) //42 + 44 = 86
+var num = (--number) + (number--) //41 + 41 = 82
+var num = (number--) + (--number) //42 + 40 = 82
+
 //array to string convert
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 let text = fruits.toString();
@@ -781,6 +783,17 @@ console.log(a1[0])
 var b = reverseArr(a1);
 console.log(b)
 // reverse a string 
+const fruits = "Mango";
+// console.log(fruits.reverse());//.reverse() change the original array
+function reverseArr(input) {
+    fruits.split(",")
+    var ret = '';
+    for (var i = input.length - 1; i >= 0; i--) {
+        ret = ret + fruits[i]
+    }
+    return ret;
+}
+console.log("HOC",reverseArr(fruits))
 // sort a array (high to low)
 console.log("sort", arr.sort((function (a, b) {
     if (a > b) {
