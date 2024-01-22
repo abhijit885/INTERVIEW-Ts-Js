@@ -41,6 +41,7 @@ function test2() {
     }
 }
 
+
 //declaration let and const not be declear in same scopr var can 
 var a//ok 
 var a//ok
@@ -73,6 +74,13 @@ const aa = 10
 let BB = 10 //hested in temoiral ded zone (we get it in scrept section in inspect => console =>sources =>add breakpoint and run ) output undefind
 console.log(aa)
 var aa = 10 //hested output undefind 
+
+var x = 21;
+var fun = function () {
+    console.log(x); //undefine
+    var x = 20;
+};
+fun(); //OUTPUT undefine
 
 //JS execution context have 2 things(creation phase, execution phase)
 
@@ -372,6 +380,7 @@ enroll2()
 /* async Await */
 //1.no need to return promise by default async return a promise 
 //await is to hold the execution of code(waiting for promise) in js engine after getting the promise execution again started
+//EXAMPLE-1
 const paymentSuccess3 = true
 const marks3 = 90
 const enroll3 = async () => {
@@ -420,7 +429,28 @@ const head = async () => {
     }
 }
 head();
-
+//EXAMPLE-2
+const F1 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("F1 Promise resolve value !! ");
+    },5000);
+});
+const F2 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("F2 Promise resolve value !! ");
+    },2000)
+});
+async function handelPromise(){
+    console.log("handelPromise started");
+    const val1 = await F1;
+    console.log("val1");
+    console.log(val1);
+    const val2 = await F2;
+    console.log("val2");
+    console.log(val2);
+};
+handelPromise();
+console.log("Welcome to JS");
 
 /* annonomas function */
 //all build in array and string function return type => MAP() FILTER() REDUCE() sort() 
@@ -428,7 +458,7 @@ head();
 //slice() Splice() IndexOf() trim() ??
 
 /* JS single threaded but how perform call back function */
-
+//JS execution is not pause. Function execution is suspended 
 // dependency vs Dev dependency
 // -normal dependency is for project function purpous ,if use -dev in here will increse js bundle size  
 // -dev mins package is using for development purpous
@@ -596,6 +626,41 @@ arr.forEach((val) => {
 
 // traditional function vs arrow function
 
+// 1- syntex 
+function abc (num) {
+    return num * num
+}
+const abc = (num) => {
+    return num * num
+}
+// 1- implicit return in normal function 
+function abc (num) {
+    return num * num
+}
+const abc = (num) => num * num
+// 3 - arguments 
+function fn2() {
+    console.log(arguments)
+}
+fn(1,2,3) //prints all arguments
+const fn1 = () => {
+    console.log(arguments)
+}
+fn(1,2,3);
+// 4 - this keyword 
+let user = {
+    username: "abhijit saha",
+    fun3: () => {
+        console.log("this keyword" + this.username)
+    },
+    fun4() {
+        console.log("this keyword"  + this.username)
+    },
+};
+
+user.fun3();
+user.fun4();
+
 // while vs doWhile 
 
 
@@ -639,9 +704,15 @@ console.log(res);
 // 3. rest operator use in function parameter
 const func = (q, ...params) => {
     console.log("q", q)
-    console.log("a", params)
+    console.log("...params", ...params)
 }
 func(4, 5, 6, 7)
+
+const func3 = (a,p,q, ...params,x,y) => { // rest operater is always at last perameter (a,p,q,x,y,...params)
+    console.log( p,q)
+  
+}
+func(4, 5, 6,)
 
 const func2 = (...params) => {
     let sum = 0;
@@ -765,6 +836,17 @@ console.log("first MAX ", max);
 arr.splice(arr.indexOf(max), 1);
 var secondMax = Math.max.apply(null, arr);
 console.log("first MAX ", secondMax);
+var arr = [20, 120, 111, 215, 54, 78];
+
+// Sort the array in descending order
+var sortedArr = arr.sort(function(a, b) {
+  return b - a;
+});
+
+// Retrieve the second element (index 1) from the sorted array
+var secondHighest = sortedArr[1];
+
+console.log("Second Highest:", secondHighest);
 
 // reverse a array
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -1024,6 +1106,13 @@ numbers.forEach(myFunction);
 function myFunction(item) {
     sum += item;
 }
+// reverse a given number
+function revStr(q){
+    return  Number(q.toString().split("").reverse().join(''))
+    //console.log(typeof reversedStr);
+    }
+    console.log(revStr(12))
+//
 ////////////////////////-------OutPut Base Questions--------//////////////////////////////
 
 // var number = 42

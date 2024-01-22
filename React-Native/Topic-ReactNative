@@ -450,16 +450,16 @@ export default TextInputs;
 />;
 */
 
-//HOOKS?
+//HOOKS? hooks are utility function ,special dynamic veriable 
 /*
 1.UseState hook
 
-2.useState is a Hook that lets you add state to function components.
+2.useState is a Hook that lets you add state to function components.when useState change dom refresh
 // EX => const [isHungry, setIsHungry] = useState(true);
 
 3.UseEffect
 
-The Effect Hook lets you perform side effects in function components , mostly use in apiCall
+The Effect Hook lets you perform side effects in function components , mostly use in apiCall,conditionaly
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
         // Update the document title using the browser API

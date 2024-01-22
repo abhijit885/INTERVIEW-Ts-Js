@@ -43,10 +43,29 @@ streams
 implecit and explecit animation
 **User input and form Validation**
 **Theame Font Assets local Database payment getway Map LowLevel API(camera,battery acccess)**
-**State Management(Provider,RiverPod,getX,Bloc,Cubic)Approach** simplify all this things
+**State Management(Provider,RiverPod,getX,Bloc,Cubic)Approach**
+//normal setState **every time it rerender the page whenever state update**
+int initaValue = 60;
+@override
+void initState(){
+Timer.periodic(Duration(seconds: 1), (t){
+    setState(() {
+        initalValue--;
+    });
+});
+}
 **Provider**
+step-01
+creat model for provider & create instance of model using changeNotifireProvider()
+step-02
+update the data in model with notifylisteners()
+step-03
+consumer() consume or update the date inside widgets 
+**BloC**//Buisness Logic Component (Buisness Logic is seperated from your UI is recomended for Big Project )
+1.streamBuilder()
+2.streamController()
+  2 things in streamController stream and sink
 
-**Bloc**
 **GetX**follow MVC pattern model(skema),view,controller(have all the state)
 1.state management =>>
 class Controller extends GetxController{
