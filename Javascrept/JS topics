@@ -1,5 +1,5 @@
 1.var,let,const
-2.hosting of veriables
+2.hosting of veriables,Scope,Shadowing,Illigal shadowing
 3.arrow function
 4.higher order function
 5.array distructuring
@@ -17,3 +17,29 @@
 17.async, await
 18.try , catch (error handel)
 
+//CODE SNIPETS QUESTIONS
+for vs forEatch
+map vs forEatch
+arrow function vs reguler function
+map() , filter() , reduce() , setTimeout(), sort () split() slice() trim(remove ''/,/.), conCat() , findIndex() ,find()
+split() VS slice()
+callback function
+first class function [function inside function]
+annonomas function (noname of function) only in callback or assign in variable
+for of any etarable object like array,object,string,return values //of for value
+for in etaret all elements and return the index if the value exist // for in loop operate in object // in for index 
+reverse a given number
+remove duplicate elements from string 
+Frecuency of charecters in a given string 
+find smallest element in array 
+list of repete element and there count
+array in ascending order 
+array in descending order
+// filter a array
+// filter run condition on each element of array and pushed in output array
+// search a array element
+reverse a string 
+Retrieve the second element (index 1) from the sorted array
+Sort the array in descending order
+find 2nd highest element in array 
+find highest element in array 
