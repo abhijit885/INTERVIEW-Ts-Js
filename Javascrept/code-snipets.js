@@ -726,19 +726,20 @@ console.log(func(4, 5, 6, 7));
 // 4. distrcuring
 const objDis = {
     name: "aaaa",
-    roll: "87"
-    // education:{
-    //     name:"kaka"
-    //     destination:{
-    //         city:"ladak"
-    //     }
-    // }
+    roll: "87",
+    education:{
+        name:"kaka",
+        destination:{
+            city:"ladak"
+        }
+    }
 }
 const output = {
-    // education:{destination:{city}}
+    education:{destination:{city}},
     name
 } = objDis
 console.log("aqq", output)
+console.log("aqq", output.education.destination.city); // Output: aqq ladak
 
 //----------- ES 2021 -----------
 //1.GlobalThis
