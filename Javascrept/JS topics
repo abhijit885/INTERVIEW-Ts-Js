@@ -23,23 +23,157 @@ map vs forEatch
 arrow function vs reguler function
 map() , filter() , reduce() , setTimeout(), sort () split() slice() trim(remove ''/,/.), conCat() , findIndex() ,find()
 split() VS slice()
+polyfill of map() filter() reduce()
 callback function
 first class function [function inside function]
 annonomas function (noname of function) only in callback or assign in variable
 for of any etarable object like array,object,string,return values //of for value
 for in etaret all elements and return the index if the value exist // for in loop operate in object // in for index 
-reverse a given number
-remove duplicate elements from string 
-Frecuency of charecters in a given string 
-find smallest element in array 
-list of repete element and there count
-array in ascending order 
-array in descending order
-// filter a array
-// filter run condition on each element of array and pushed in output array
-// search a array element
-reverse a string 
-Retrieve the second element (index 1) from the sorted array
-Sort the array in descending order
-find 2nd highest element in array 
-find highest element in array 
+1.reverse a given number
+let num = 234
+console.log( Number(num.toString().split('').reverse().join('')))
+2.remove duplicate elements from string 
+let string = "aaaaaaaa"
+let finalStr = ''
+for (let i=0;i<string.length;i++){
+    if(string.indexOf(string[i]) === i){
+        finalStr += string[i]
+    }
+}
+console.log(finalStr)
+3.Frecuency of charecters in a given string 
+let inputString = "a";
+let charFrequency = {};
+
+for (let i = 0; i < inputString.length; i++) {
+    let currentChar = inputString[i];
+    if (charFrequency[currentChar]) {
+        charFrequency[currentChar]++;
+    } else {
+        charFrequency[currentChar] = 1;
+    }
+}
+for ( char in charFrequency) {
+    console.log(`Character '${char}' occurs ${charFrequency[char]} times`);
+}
+4.find smallest element in array 
+let arr = [ 6, 9, 9, 7, 3, 4]
+let res = arr[0]
+for (i=1;i<arr.length;i++){
+    if(arr[i] > res){
+        res = arr[i]
+    }
+}
+console.log(res)
+5.list of repete element and there count
+let arr = [2, 6, 2, 9, 9, 7, 3, 4, 3, 6, 5, 2, 6, 7, 4, 3, 7]
+y = arr.sort()
+let counter = 1;
+y.map((item, index) => {
+    if (y[index] == y[index + 1]) {
+        counter = counter + 1
+    } else {
+        console.log(item + "is" + counter + "times");
+        counter = 1
+    }
+})
+6.array in ascending order 
+let arr = [9,9,6,7,7,7,7,7,7,7,2,9,1]
+let found = arr.filter((a,b)=> b-a)
+console.log(found);
+7.array in descending order
+8.filter a array
+let arr = [9,9,6,7,7,7,7,7,7,7,2,9,1]
+let found = arr.filter((i)=> i > 6)
+console.log(found);
+9.filter run condition on each element of array and pushed in output array
+let arr = [9,9,6,7,7,7,7,7,7,7,2,9,1]
+let res =[] 
+let found = arr.filter((i)=>{
+    if(i>7){
+        res.push(i)
+    }
+})
+console.log(res);
+10.search a array element
+let arr = [9,9,6,7,7,7,7,7,7,7,2,9,1]
+let res = 0
+let found = false
+for (let i=0; i<arr.length;i++){
+    if(arr[i] ==2 ){
+        res = arr[i]
+        found =true
+        break
+    }
+}
+if (found) {
+    console.log('Found the number:', res);
+} else {
+    console.log('NOT FIND THE NUMBER!');
+}
+11.reverse a string 
+let str = 'ABHIJIT'
+let revStr = ''
+for (let i=str.length-1; i>=0;i--){
+    revStr+= str[i]
+}
+console.log(revStr);
+12.Retrieve the second element (index 1) from the sorted array
+let arr = [9,9,6,7,7,7,7,7,7,7,2,9,1]
+let sortedArr = arr.sort((a,b) => b-a )
+console.log(sortedArr[2]);
+13.Sort the array in descending order
+let arr = [9,9,6,7,7,7,7,7,7,7,2,9,1]
+let sortedArr = arr.sort((a,b) => b-a )
+console.log(sortedArr);
+14.find 2nd highest element in array 
+let arr = [9,9,6,7,7,7,7,7,7,7,2,9,1]
+let duplicateRem = []
+for (let i=0;i<arr.length;i++){
+    if(duplicateRem.indexOf(arr[i]) === -1){
+        duplicateRem.push(arr[i])
+    }
+}
+let sortedArr = duplicetRem.sort((a,b) => b-a )
+
+console.log(sortedArr[1]);
+15.find highest element in array 
+let arr = [9,9,6,7,7,7,7,7,7,7,2]
+let res = 0
+for (let i=0;i<arr.length;i++){
+    if(arr[i]> res){
+        res = arr[i]
+    }
+}
+console.log(res);
+16.remove duplicate elements from array
+ let res3 = arr.filter((item,index) => {
+   return arr.indexOf(item) === index
+ })
+function remDup (ele) {
+    return ele.filter((item,index) => {
+       return ele.indexOf(item) === index
+    })
+}
+console.log(remDup([9,9,6,7,7,7,7,7,7,7,2]))
+function remDup(ele) {
+    let uniqueArray = [];
+    for (let i = 0; i < ele.length; i++) {
+        if (uniqueArray.indexOf(ele[i]) === -1) {
+            uniqueArray.push(ele[i]);
+        }
+    }
+    return uniqueArray;
+}
+17.string to array convert 
+let res2 = str.split(' ')
+18.array to string convert
+let res = arr.toString()
+19. add all array elements let arr = [9,9,6,7,7,7,7,7,7,7,2,9,1]
+let arr = [2,2,1]
+let found = 0 
+for(i=0;i<arr.length;i++){
+    found += arr[i]
+}
+console.log(found);
+

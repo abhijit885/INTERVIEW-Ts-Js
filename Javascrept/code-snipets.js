@@ -949,7 +949,8 @@ y.map((item, index) => {
     }
 })
 const XX = [1, 2, [3, 4, [5, 6]]]
-//output = [1,2,3,4,5,6]
+//output will be = [1,2,3,4,5,6]
+console.log( XX.flat(2))
 const y = XX.toString()
 const yy = y.slice(",")
 const finalArray = []
