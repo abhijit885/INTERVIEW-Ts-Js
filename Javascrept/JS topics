@@ -79,7 +79,7 @@ y.map((item, index) => {
 })
 6.array in ascending order 
 let arr = [9,9,6,7,7,7,7,7,7,7,2,9,1]
-let found = arr.filter((a,b)=> b-a)
+let found = arr.sort((a,b)=> b-a)
 console.log(found);
 7.array in descending order
 8.filter a array
