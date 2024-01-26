@@ -72,7 +72,7 @@ rendering a lot of images on one screen
 low performance in general
 low - performance loading from cache
 2.memo : => memorize a state value,shallow compare between previous prop and next props only for premetive value (mens not passing callback function,array,objects)
-3.useMemo : => memorize any operation of a function ,is a callback function and have a dependency Array
+3.useMemo : => memorize any value or variable ,is a callback function and have a dependency Array
 4.useCallback : => memorize a function , is a callback function and have a dependency Array
 5.Use appropriate image size
 6.Avoid unnecessary renders ex: -> use useMemo()
@@ -514,7 +514,7 @@ useRef returns a mutable ref object whose.current property is initialized to the
 6.UseCallback => 
 
 Returns a memoized callback or function.
-Pass an inline callback and an array of dependencies.useCallback will return a memoized version of the callback that only changes if one of the dependencies has changed.
+Pass an inline callback and an array of dependencies.useCallback will return a memoized version of the callback that only changes if one of the dependencies has changed.(in react there is a term deferential equality , whenever er render happend in a component react create all functions again. that time put the function in useCallback)
         import { useState, useMemo, useCallback } from './react';
     function ChildrenA({ Learning, count }) {
         console.log("children component")
