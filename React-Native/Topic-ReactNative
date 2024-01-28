@@ -329,12 +329,35 @@ connect with apple account
 */
 
 // import Scripts vertual scroll view
+This is the idea of rendering only visible rows of content in a dynamic list instead of the entire list. The rows rendered are only a small subset of the full list with what is visible.This can improve rendering performance.Virtualization massively improves memory consumption and performance of large lists.“RCTScrollView” is a native component that is used by the ScrollView component in React Native. It is a wrapper around the native UIScrollView on iOS and the native android.widget.ScrollView on Android.
+
+Mainly, these are virtualization components provided by the React Native team.
+
+1.VirtualizedList
+2.FlatList
+3.SectionList
+4.ScrollView with Virtualization
 
 // Google all services Map,Google Login,Facebook Login IN APP INTEGRATION
+
+page-E-naton in react native
+
+1.check from backend page e nation and limit must come 
+2.marge data with existing state where we store array of list using spread the new array and old array
+3.in flatlist onEndReached={() => {
+call api again with new page number 
+}} //when end to the last item of list
+and 
+onEndReachedThreshold={()=>{
+}} //visibility of last item 
+4.add loader 
+
+// Language change in react native
 
 // Firebase Service (social login ,CRUD operation,notifecation)
 
 // Local Storage @react-native-async-storage/async-storage
+we will be utilizing two libraries for localization and internationalization: i18next and react-i18next.
 
 //////////////////////--------- Styles -----------/////////////////////
 
