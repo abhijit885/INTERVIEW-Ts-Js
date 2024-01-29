@@ -564,7 +564,7 @@ Pass an inline callback and an array of dependencies.useCallback will return a m
 7.customHook =>
 
 A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks.
-remove the duplicat logic from a compoment and extract the logic in custom hook is like HOC component
+remove the duplicat logic from multiple compoments and extract the logic in custom hook is like HOC(hire order component) component,also like normal function
     import { useState } from 'react';
     function useCounter(initialValue = 0) {
         const [count, setCount] useState(initialValue)
@@ -618,7 +618,7 @@ remove the duplicat logic from a compoment and extract the logic in custom hook 
     export default App
 */
 /*
-//useContext : =>The context in React lets you supply child components with global data, no matter how deep they are in the components tree.
+//useContext : =>The context in React lets you supply child components with global data, no matter how deep they are in the components tree.useContext is batter then useContext API
 
 Using the context requires 3 steps: creating, providing, and consuming the context.
 

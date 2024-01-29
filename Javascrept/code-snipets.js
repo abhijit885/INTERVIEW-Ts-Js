@@ -249,8 +249,8 @@ foo(); // Invoke it using the variable
 function sayHello() {
     return "Hello, ";
 }
-function greeting(helloMessage, name) {
-    console.log(helloMessage() + name);
+function greeting(hello, name) {
+    console.log(hello() + name);
 }
 greeting(sayHello, "JavaScript!");
 // Pass `sayHello` as an argument to `greeting` function
