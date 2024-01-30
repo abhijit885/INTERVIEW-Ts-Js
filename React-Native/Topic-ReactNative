@@ -353,7 +353,7 @@ onEndReachedThreshold={()=>{
 4.add loader 
 
 // Language change in react native
-
+i-18 and i18-next used
 // Firebase Service (social login ,CRUD operation,notifecation)
 
 // Local Storage @react-native-async-storage/async-storage
