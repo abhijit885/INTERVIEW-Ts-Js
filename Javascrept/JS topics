@@ -1,5 +1,5 @@
 1.var,let,const
-2.hosting of veriables,Scope,Shadowing,Illigal shadowing
+2.hosting of veriables,Scope,hoisting,Shadowing,Illigal shadowing,execution context
 3.arrow function
 4.higher order function
 5.array distructuring
@@ -29,6 +29,22 @@ first class function [function inside function]
 annonomas function (noname of function) only in callback or assign in variable
 for of any etarable object like array,object,string,return values //of for value
 for in etaret all elements and return the index if the value exist // for in loop operate in object // in for index 
+EX:0
+let arr = [0,1,2,3]
+// console.log(arr.unshift(0,2));
+// console.log(arr.shift(0));
+// console.log(arr.push(4));
+// console.log(arr.pop(4));
+const slice = arr.slice(0,1);//mot return the last element//0
+console.log(slice);
+// const splice = arr.splice(2,2,22,33);replace the existing elements
+// console.log(splice);
+//console.log(arr);
+// let str = "abhijit saha"
+// const trim = str.trim(); //remove only white space from first and last 
+// console.log(trim);
+// const split = str.split('');
+// console.log(split);
 1.reverse a given number
 let num = 234
 console.log( Number(num.toString().split('').reverse().join('')))
@@ -41,6 +57,21 @@ for (let i=0;i<string.length;i++){
     }
 }
 console.log(finalStr)
+let string = "aabbccdd"
+let arr = [94,34,76,25,123,45]
+let finalStr = ''
+for (let i=0;i<string.length;i++){
+    console.log("for all indexOf>>",string.indexOf(string[i]))
+        console.log("for all i>>",i)
+
+    // if(string.indexOf(string[i]) === i){
+    //     console.log(string.indexOf(string[i]))
+    //     finalStr += string[i]
+    // }
+            
+
+}
+console.log("finalStr>>>>>",finalStr)
 3.Frecuency of charecters in a given string 
 let inputString = "a";
 let charFrequency = {};

@@ -6,6 +6,29 @@
 //const : block scope + value never change
 
 /* Scope */ 
+ex:1
+var a = 6
+{
+    var a = 6
+    let b = 5
+    const c = 7
+    console.log(a)
+    console.log(b)
+    console.log(c)
+}
+console.log(a)
+ex:3
+let a = 6
+{
+    var a = 30
+    let b = 5
+    const c = 7
+    console.log(a)
+    console.log(b)
+    console.log(c)
+}
+console.log(a)
+ex:2
 var a = 6
 console.log(a) //ok
 {
@@ -20,6 +43,16 @@ let a = 4
 console.log(a)
 const a = 4
 console.log(a)
+ex:2
+function a(){
+    var b=10
+    c()
+    function c () {
+        console.log(b)
+    }
+}
+a()
+//console.log(b);
 //es6 scop + shadowing
 function test() { //shadowing
     let a = "Hello"
@@ -241,6 +274,13 @@ const ex1 = function x() {
 
 /* first class function */ 
 //( Pass a function as an Argument) treated like variable,when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+ex:1
+var B = function (parameter) {
+    console.log("function", parameter);
+}
+B(function () { 
+})/// output will be annomas function
+ex:2
 const foo = () => {
     console.log("foobar");
 };
@@ -253,6 +293,7 @@ function greeting(hello, name) {
     console.log(hello() + name);
 }
 greeting(sayHello, "JavaScript!");
+
 // Pass `sayHello` as an argument to `greeting` function
 // Output -- Hello, JavaScript!
 //Returning a function
@@ -540,6 +581,34 @@ function test() {
 test()
 
 /* closer */
+ex:1
+function x() {
+    var ab = 10
+    function y() {
+        console.log(ab)
+    }
+    return // function and its lezical scope return
+}
+var z = x()
+console.log(z) //10
+///.....1000 of code then 
+z() //store hole function with its lezical scope
+ex:2
+function x() {
+    var c = 20
+    function y(b) {
+        let a = 10
+        function z() {
+            console.log(a,b,c)
+        }
+        return z
+    }
+    return y
+}
+// let a = 100
+ var closer = x()("abhijit")
+ closer()
+ex:3
 function subscribe() {
     var name = "Abhijit" //global scope
     //inner scope
@@ -553,8 +622,24 @@ function subscribe() {
     displayname()
 }
 subscribe()
-
+/* data hiding and encapsulation*/
+function counter() {
+    var count = 0;
+    return function increment() {
+        count = count + 1;
+        console.log(count);
+    }
+}
+var counter1 = counter();
+counter1();
+counter1();
+var counter1 = counter();
+counter1();
+counter1();
+counter1();
+counter1();
 /* illegal Shadowing */
+
 
 
 /* Polyfill for map() FILTER() REDUCE() */
