@@ -28,6 +28,7 @@ JS - threads
 shalow copy / deep copy
 deepLinking
 diffing algorithm(vartual DOM real DOM)
+axios() vs fetch()
 
 **\***JS QUESTIONS**\***
 1.null vs nan vs undefined

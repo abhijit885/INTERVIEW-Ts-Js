@@ -618,12 +618,42 @@ remove the duplicat logic from multiple compoments and extract the logic in cust
     export default App
 */
 /*
-//useContext : =>The context in React lets you supply child components with global data, no matter how deep they are in the components tree.useContext is batter then useContext API
+//useContext : =>send data from parent to most last child without sending data to other components.no requred props dreeling useContext is batter then useContext API only the time of consuming time need to write lotes of code .
 
-Using the context requires 3 steps: creating, providing, and consuming the context.
+Using the context requires 3 steps: creating context using creatContext(), providing by <data.provider>, to consuming the useContext().
 
 When integrating the context into your application, consider that it adds a good amount of complexity. Sometimes drilling the props through 2-3 levels in the hierarchy isn't a big problem.
 
+state lifting => pass data child to parent . taking a useState then pass the use state function to child component using props and ise the vareable in parent, then from child modifide the data using click of a button and the function in child .
+
+Props Drilling => pass data parent to child 
+
+    import React from 'react'
+    function App() {
+        let name = "abhijit"
+        return (
+            <View>
+                <Counter1 nameIs={neme}/>
+            </View>
+        )
+    }
+    export default App
+
+    import React from 'react';
+    function Counter1({name}) {
+        return (
+           <Component2 nameIs={name}/>
+        )
+    }
+    export default Counter1
+
+    import React from 'react';
+    function Counter2() {
+        return (
+           <Component3/>
+        )
+    }
+    export default Counter2
 
 */
 //deepLinking ? => Deep Linking is a technique in which a given URL or resource is used to open a specific page or screen on mobile. So, instead of just launching the app on mobile, a deep link can lead a user to a specific screen within the app, providing a better user experience. This particular screen may reside under a series of hierarchical pages, hence the term "deep" in deep linking. It is useful for marketing campaigns, app-user retention, etc. As an application user, you probably have experienced deep linking when opening a link, for example, for a product in an e-commerce store from the web browser. If you have the app of that shop installed, it may use a deep link to open the app navigate you directly to that product’s screen.
@@ -632,3 +662,12 @@ handle 2 scenarios:
 1.If the app wasn't previously open, the deep link needs to set the initial state
 2.If the app was already open, the deep link needs to update the state to reflect the incoming link
 /*
+
+axios() vs fetch() =>
+axios() 
+1.always need to import.
+2.results are formate like status,header,data easy to manupulet using dot
+fetch()
+1.at the time we get data need to convert in JSON, and the time of post convert in string
+2.for post in url u need to separetly mention methods,body,and JSON.stringefy for post
+
