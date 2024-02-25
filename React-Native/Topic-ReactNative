@@ -227,7 +227,16 @@ Store => A store is an object that holds the app's entire state tree. Redux can 
 
 //@types/styled-components
 
-//Testing JEST ?
+//Testing
+Write Unit Tests: Unit tests focus on testing individual components, functions, or modules in isolation. With Jest, you can write unit tests for React components and utility functions. Ensure that each component's behavior is tested thoroughly.
+
+Write Integration Tests: Integration tests verify that different components work together correctly. You can use Jest or tools like react-native-testing-library to simulate user interactions and test the integration of various components.
+
+Write End-to-End (E2E) Tests: E2E tests simulate real user scenarios by interacting with the app as a user would. Detox and Appium are popular choices for E2E testing in React Native apps. Write tests to cover common user workflows and edge cases.
+
+Run Tests: Set up a CI/CD pipeline to automatically run tests whenever code changes are pushed to the repository. This ensures that new changes don't introduce regressions or break existing functionality.
+
+
 /*
 Jest unit testing freamwork
 
